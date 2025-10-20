@@ -30,11 +30,3 @@ const activityFeed = [
     body: "Team meeting starts in 30 minutes!",
   },
 ];
-
-app.get("/feed", (req, res) => {
-  res.json(activityFeed);
-});
-
-app.get("/status", (req, res) => {
-  res.json({ status: "ok", timestamp: new Date().toISOString() });
-});
