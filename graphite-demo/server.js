@@ -44,3 +44,7 @@ app.listen(port, () => {
   console.log(`Feed available at http://localhost:${port}/feed`);
   console.log(`Health check at http://localhost:${port}/status`);
 });
+
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
