@@ -14,19 +14,12 @@ const activityFeed = [
     title: "Comment on Post",
     body: "Bob commented on Charlie's post.",
   },
-  {
-    id: 13,
-    title: "Status Update",
-    body: 'Charlie updated their status: "Excited about the new project!"',
-  },
-  {
-    id: 4000,
-    title: "Friend Request",
-    body: "Diana sent you a friend request.",
-  },
-  {
-    id: 5000,
-    title: "Event Reminder",
-    body: "Team meeting starts in 30 minutes!",
-  },
 ];
+
+app.get("/feed", (req, res) => {
+  res.json(activityFeed);
+});
+
+app.get("/status", (req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
