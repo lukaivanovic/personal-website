@@ -42,7 +42,6 @@ export default function Home() {
     <div className="min-h-screen space-y-20 lg:space-y-20 pb-[240px]">
       <section>
         <div>
-          {/* <TestStreamingVideo /> */}
           <VideoComponent fileName="buena-website-dark" aspectRatio="16/9" />
         </div>
         <div className="flex flex-col gap-1 mt-6">

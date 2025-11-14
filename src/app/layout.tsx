@@ -48,12 +48,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <head>
-        <Script
-          src="https://cdn.jsdelivr.net/npm/hls.js@latest"
-          strategy="beforeInteractive"
-        />
-      </head>
       <body className="mx-auto grid  grid-cols-1 lg:grid-cols-[288px_1fr] gap-x-6 ">
         <div className="bg-white pl-8 pr-4 lg:pr-[0]">
           <div className="sticky top-0 flex flex-col lg:min-h-screen gap-4 py-8">
