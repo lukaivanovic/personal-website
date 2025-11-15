@@ -1,15 +1,73 @@
 @import "tailwindcss";
 
+.root {
+  isolation: isolate;
+}
+
 :root {
   --background: white;
   --foreground: black;
-  --color-primary: black;
-  --color-secondary: var(--color-neutral-700);
+  --foreground-secondary: #666666;
+  --expo-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme {
-  --color-primary: var(--color-primary);
-  --color-secondary: var(--color-secondary);
+  --color-*: initial;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.text-title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.text-body {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.text-caption {
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+[data-theme="dark"] {
+  --background: #130923;
+  --foreground: #b6e4ee;
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
+}
+
+[data-theme="stone"] {
+  --background: #eae7e1;
+  --foreground: #141a21;
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--foreground-secondary);
 }
 
 @font-face {
@@ -36,51 +94,63 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-size: 13px;
   text-rendering: optimizeLegibility;
+  font-family: "TWK Lausanne", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
-}
-
-h1 {
-  font-size: 17px;
-  line-height: 1.4;
-  font-family: "TWK Lausanne", sans-serif;
-  font-weight: 450;
-}
-
-h2 {
-  font-family: "TWK Lausanne", sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-p {
-  font-size: 13px;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.text-primary {
-  color: var(--color-primary);
-}
-
-.text-secondary {
-  color: var(--color-secondary);
+  position: relative;
 }
 
 @utility underline-link {
-  @apply underline underline-offset-2 decoration-neutral-300 hover:text-primary;
+  @apply underline underline-offset-2 text-foreground hover:text-secondary;
 }
 
 @utility border-link {
-  @apply border border-neutral-300 rounded-full px-2 py-1 flex flex-row items-center justify-center gap-2 h-8 text-neutral-600 hover:bg-neutral-100;
+  @apply border border-foreground rounded-full px-2 py-1 flex flex-row items-center justify-center gap-2 h-8 text-foreground;
 }
 
 @utility button-link {
-  @apply border border-transparent bg-black hover:bg-neutral-800 rounded-full px-2 py-1 flex flex-row items-center justify-center gap-2 h-8 text-white;
+  @apply border border-transparent bg-[#000000] rounded-full px-2 py-1 flex flex-row items-center justify-center gap-2 h-8 text-foreground;
+}
+
+/* View Transitions */
+::view-transition-group(root) {
+  animation-duration: 0.7s;
+  animation-timing-function: var(--expo-out);
+}
+
+::view-transition-new(root) {
+  animation-name: reveal-light;
+  animation-fill-mode: both;
+}
+
+::view-transition-old(root),
+[data-theme="dark"]::view-transition-old(root) {
+  animation: none;
+  animation-fill-mode: both;
+  z-index: -1;
+}
+
+[data-theme="dark"]::view-transition-new(root) {
+  animation-name: reveal-dark;
+  animation-fill-mode: both;
+}
+
+@keyframes reveal-dark {
+  from {
+    clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+  }
+  to {
+    clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+  }
+}
+
+@keyframes reveal-light {
+  from {
+    clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+  }
+  to {
+    clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+  }
 }

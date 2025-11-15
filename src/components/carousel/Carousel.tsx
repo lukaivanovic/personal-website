@@ -102,7 +102,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div>
-      <div className="relative main-image-container overflow-hidden rounded-lg aspect-[8/5] flex items-center justify-center">
+      <div className="relative main-image-container overflow-hidden aspect-[16/9] flex items-center justify-center">
         <AnimatePresence initial={false}>
           {renderSlide(images[activeIndex], activeIndex)}
         </AnimatePresence>

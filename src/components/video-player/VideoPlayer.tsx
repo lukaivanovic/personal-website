@@ -68,7 +68,7 @@ export default function VideoPlayer({
   return (
     <div
       ref={containerRef}
-      className={cn(`overflow-hidden relative w-full rounded-lg`, className)}
+      className={cn(`overflow-hidden relative w-full`, className)}
       style={{ aspectRatio: aspectRatio }}
     >
       <img
