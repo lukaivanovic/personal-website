@@ -55,8 +55,8 @@ export default function RootLayout({
           </Link> */}
           <ThemeSelect />
         </header>
-        <main className="bg-background flex justify-between gap-x-30 text-body container">
-          <div className="sticky top-0 flex flex-col w-64 shrink-0">
+        <main className="bg-background flex flex-col md:flex-row justify-between gap-y-6 md:gap-x-30 text-body container">
+          <div className="flex flex-col w-full md:w-64 shrink-0">
             {/* <div className="flex flex-col gap-4 pb-12">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

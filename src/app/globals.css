@@ -116,8 +116,8 @@ body {
 
 /* View Transitions */
 ::view-transition-group(root) {
-  animation-duration: 0.7s;
-  animation-timing-function: var(--expo-out);
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
 ::view-transition-new(root) {
@@ -137,20 +137,24 @@ body {
   animation-fill-mode: both;
 }
 
+video {
+  view-transition-name: well-video;
+}
+
 @keyframes reveal-dark {
   from {
-    clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
   }
   to {
-    clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
 @keyframes reveal-light {
   from {
-    clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
   }
   to {
-    clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
