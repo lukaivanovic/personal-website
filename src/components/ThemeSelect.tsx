@@ -4,8 +4,10 @@ import * as React from "react";
 import { Select } from "@base-ui-components/react/select";
 
 const themes = [
-  { label: "Dark", value: "dark" },
-  { label: "Stone", value: "stone" },
+  { label: "8-ball", value: "8-ball" },
+  { label: "Strawberry", value: "strawberry" },
+  { label: "Cool Blue", value: "cool-blue" },
+  { label: "Hazelnut", value: "hazelnut" },
 ];
 
 function setTheme(theme: string) {
@@ -45,7 +47,7 @@ export default function ThemeSelect() {
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
       <Select.Trigger className="cursor-default">
-        <Select.Value />
+        {themes.find((theme) => theme.value === value)?.label || "Stone"}
       </Select.Trigger>
       <Select.Portal>
         <Select.Positioner

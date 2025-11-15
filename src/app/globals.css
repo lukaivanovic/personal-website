@@ -44,7 +44,17 @@ h2 {
   font-weight: 500;
 }
 
-[data-theme="dark"] {
+[data-theme="8-ball"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
+}
+
+[data-theme="cool-blue"] {
   --background: #130923;
   --foreground: #b6e4ee;
   --foreground-secondary: color-mix(
@@ -54,9 +64,19 @@ h2 {
   );
 }
 
-[data-theme="stone"] {
+[data-theme="hazelnut"] {
   --background: #eae7e1;
   --foreground: #141a21;
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
+}
+
+[data-theme="strawberry"] {
+  --background: #ffc8ea;
+  --foreground: #ff2e00;
   --foreground-secondary: color-mix(
     in srgb,
     var(--foreground) 72%,
@@ -117,7 +137,7 @@ body {
 /* View Transitions */
 ::view-transition-group(root) {
   animation-duration: 0.6s;
-  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 ::view-transition-new(root) {

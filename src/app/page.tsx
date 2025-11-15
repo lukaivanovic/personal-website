@@ -1,35 +1,5 @@
-import Carousel from "@/components/carousel/Carousel";
+import Image from "next/image";
 import VideoPlayer from "@/components/video-player/VideoPlayer";
-
-const wewebImages = [
-  {
-    src: "weweb/main.png",
-    alt: "Manage your app logic and data from a single place",
-    progressColor: "white",
-    dotColor: "black",
-  },
-  {
-    src: "weweb/workflows.png",
-    alt: "Build your logic and automation with the workflow editor",
-    progressColor: "#ED8D36",
-    dotColor: "black",
-  },
-
-  {
-    src: "weweb/edition-panel.png",
-    alt: "Create states, components or edit your elements visually",
-    progressColor: "#8F79F1",
-    dotColor: "black",
-  },
-  {
-    fileName: "ww-ai",
-    aspectRatio: "16/10",
-    alt: "AI-powered features in WeWeb",
-    duration: 20000,
-    progressColor: "#F09CEB",
-    dotColor: "black",
-  },
-];
 
 export default function Home() {
   return (
@@ -67,27 +37,49 @@ export default function Home() {
             about startups and myself.
           </p>
         </div>
-        <div>
-          <Carousel images={wewebImages} />
+        <div className="flex flex-col gap-2">
+          <div className="relative w-full aspect-video">
+            <img
+              src="/weweb/edition-panel.png"
+              alt="Create states, components or edit your elements visually"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative w-full aspect-video">
+            <img
+              src="/weweb/main.png"
+              alt="Manage your app logic and data from a single place"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative w-full aspect-video">
+            <img
+              src="/weweb/workflows.png"
+              alt="Build your logic and automation with the workflow editor"
+              className="object-cover"
+            />
+          </div>
+
+          <VideoComponent fileName="ww-ai" aspectRatio="16/10" />
         </div>
       </section>
 
       {/* Gymmy */}
-      <section>
-        <div className="w-full aspect-[16/9] flex justify-center items-center [&>*:first-child]:w-auto [&>*:first-child]:h-full bg-black">
-          <VideoComponent fileName="workout-app" aspectRatio="1/1" />
-        </div>
-        <div className="flex flex-col gap-1 mt-6">
-          <p>Gymmy</p>
+      <section className="flex flex-col gap-6">
+        <div className="flex flex-col gap-1">
+          <h2>Gymmy</h2>
           <p className="text-secondary">
             Hobby application for tracking your workouts using your voice as
             input.
           </p>
         </div>
+        <div className="grid grid-cols-2 gap-2">
+          <VideoComponent fileName="workout-app" aspectRatio="1/1" />
+        </div>
       </section>
 
       {/* Playground */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+      <section className="grid grid-cols-2 gap-2">
         <div className="flex flex-col gap-2">
           <VideoComponent fileName="rive" aspectRatio="16/9" />
           <VideoComponent fileName="radial" aspectRatio="5/4" />
