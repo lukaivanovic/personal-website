@@ -85,11 +85,6 @@ export default function RootLayout({
                 companies on end-to-end projects including ideation, design and
                 development.
               </h1>
-              <p className="text-secondary">
-                You can contact me via email by clicking here or copy the email
-                to clipboard. Past clients include Buena, WeWeb, Daytona and
-                Akkio. I'm also relatively active on X.
-              </p>
             </div>
           </div>
           <div>{children}</div>
