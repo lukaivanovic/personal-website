@@ -47,10 +47,15 @@ export default function ThemeSelect() {
 
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
-      <Select.Trigger className="cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background px-1">
-        {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
-        <Caret className="rotate-90" />
-      </Select.Trigger>
+      <Select.Trigger
+        className="cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background px-1"
+        render={(props) => (
+          <button {...props}>
+            {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
+            <Caret className="rotate-90" />
+          </button>
+        )}
+      />
       <Select.Portal>
         <Select.Positioner
           className="outline-none select-none z-10"
@@ -65,15 +70,18 @@ export default function ThemeSelect() {
                   key={label}
                   value={themeValue}
                   className="hover:bg-background hover:text-foreground px-1 group flex flex-row items-center gap-1"
-                >
-                  <Caret
-                    className={`${
-                      value === themeValue ? "visible" : "invisible"
-                    } group-hover:visible invisible transition-opacity duration-200`}
-                  />
+                  render={(props) => (
+                    <button {...props}>
+                      <Caret
+                        className={`${
+                          value === themeValue ? "visible" : "invisible"
+                        } group-hover:visible invisible transition-opacity duration-200`}
+                      />
 
-                  <Select.ItemText>{label}</Select.ItemText>
-                </Select.Item>
+                      <Select.ItemText>{label}</Select.ItemText>
+                    </button>
+                  )}
+                />
               ))}
             </Select.List>
           </Select.Popup>
