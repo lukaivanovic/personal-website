@@ -48,7 +48,7 @@ export default function ThemeSelect() {
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
       <Select.Trigger
-        className="cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background px-1"
+        className="cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background"
         render={(props) => (
           <button {...props}>
             {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
