@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="stone">
+    <html lang="en" data-theme="hazelnut">
       <body className="root">
         <header className="bg-background flex justify-between items-center px-4 py-4 my-2 text-body container">
           <div className="flex flex-row items-center gap-2">

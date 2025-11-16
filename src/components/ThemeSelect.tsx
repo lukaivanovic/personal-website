@@ -25,8 +25,8 @@ function setTheme(theme: string) {
 }
 
 function getCurrentTheme(): string {
-  if (typeof document === "undefined") return "stone";
-  return document.documentElement.getAttribute("data-theme") || "stone";
+  if (typeof document === "undefined") return "hazelnut";
+  return document.documentElement.getAttribute("data-theme") || "hazelnut";
 }
 
 export default function ThemeSelect() {
@@ -47,7 +47,7 @@ export default function ThemeSelect() {
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
       <Select.Trigger className="cursor-default">
-        {themes.find((theme) => theme.value === value)?.label || "Stone"}
+        {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
       </Select.Trigger>
       <Select.Portal>
         <Select.Positioner

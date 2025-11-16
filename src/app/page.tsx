@@ -22,7 +22,7 @@ export default function Home() {
           </a>
         </div>
         <div>
-          <VideoComponent fileName="buena-light-3" aspectRatio="16/9" />
+          <VideoComponent fileName="buena-website" aspectRatio="16/9" />
         </div>
       </section>
 
