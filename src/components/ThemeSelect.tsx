@@ -50,13 +50,10 @@ export default function ThemeSelect() {
       <Select.Trigger
         nativeButton={true}
         className="cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background"
-        render={(props) => (
-          <button {...props}>
-            {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
-            <Caret className="rotate-90" />
-          </button>
-        )}
-      />
+      >
+        {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
+        <Caret className="rotate-90" />
+      </Select.Trigger>
       <Select.Portal>
         <Select.Positioner
           className="outline-none select-none z-10"
