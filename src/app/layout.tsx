@@ -47,24 +47,6 @@ export default function RootLayout({
           <div className="flex flex-row items-center gap-2">
             <Link href="/">
               <img
-                src="/logo-greek.jpg"
-                alt="Luka Ivanovic"
-                width={200}
-                height={200}
-                className="size-12"
-              />
-            </Link>
-            <Link href="/">
-              <img
-                src="/logo-woodstock.jpg"
-                alt="Luka Ivanovic"
-                width={200}
-                height={200}
-                className="size-12"
-              />
-            </Link>
-            <Link href="/">
-              <img
                 src="/logo-test.png"
                 alt="Luka Ivanovic"
                 width={200}
@@ -75,8 +57,8 @@ export default function RootLayout({
           </div>
           <ThemeSelect />
         </header>
-        <main className="bg-background flex flex-col md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container">
-          <div className="flex flex-col gap-6 w-full md:w-64 shrink-0">
+        <main className="bg-background flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container">
+          <div className="md:sticky md:top-8 flex flex-col gap-6 w-full md:w-64 shrink-0">
             <div className="flex flex-col">
               <div className="flex flex-row justify-between text-caption uppercase">
                 <span>Luka Ivanovic</span>

@@ -96,10 +96,10 @@ export default function VideoPlayer({
             src={`https://cdn.ivanovicluka.co/${url}.mp4`}
             type={"video/mp4"}
           />
-          <source
+          {/* <source
             src={`https://cdn.ivanovicluka.co/${url}.webm`}
             type={"video/webm"}
-          />
+          /> */}
           Your browser does not support the video tag.
         </video>
       ) : null}
