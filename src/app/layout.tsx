@@ -94,6 +94,7 @@ export default function RootLayout({
           </div>
           <div>{children}</div>
         </main>
+        <div className="h-px bg-background fixed bottom-0 left-0 right-0 z-10"></div>
         <Analytics />
         <SpeedInsights />
       </body>
