@@ -43,16 +43,36 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="stone">
       <body className="root">
-        <header className="bg-background flex justify-end items-center px-4 py-4 my-2 text-body container">
-          {/* <Link href="/">
-            <Image
-              src="/logo.png"
-              alt="Luka Ivanovic"
-              width={200}
-              height={200}
-              className="size-6"
-            />
-          </Link> */}
+        <header className="bg-background flex justify-between items-center px-4 py-4 my-2 text-body container">
+          <div className="flex flex-row items-center gap-2">
+            <Link href="/">
+              <img
+                src="/logo-greek.jpg"
+                alt="Luka Ivanovic"
+                width={200}
+                height={200}
+                className="size-12"
+              />
+            </Link>
+            <Link href="/">
+              <img
+                src="/logo-woodstock.jpg"
+                alt="Luka Ivanovic"
+                width={200}
+                height={200}
+                className="size-12"
+              />
+            </Link>
+            <Link href="/">
+              <img
+                src="/logo-test.png"
+                alt="Luka Ivanovic"
+                width={200}
+                height={200}
+                className="size-12"
+              />
+            </Link>
+          </div>
           <ThemeSelect />
         </header>
         <main className="bg-background flex flex-col md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container">

@@ -84,6 +84,11 @@ h2 {
   );
 }
 
+.logo {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(4963%)
+    hue-rotate(11deg) brightness(89%) contrast(122%);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
