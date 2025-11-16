@@ -48,7 +48,7 @@ export default function ThemeSelect() {
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
       <Select.Trigger
-        className="cursor-pointermd:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background"
+        className="cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background"
         render={(props) => (
           <button {...props}>
             {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
@@ -72,7 +72,7 @@ export default function ThemeSelect() {
                   render={(props) => (
                     <button
                       {...props}
-                      className="cursor-pointer md:cursor-default hover:bg-background hover:text-foreground px-1 group flex flex-row items-center gap-1"
+                      className="cursor-pointer md:cursor-default hover:bg-background active:bg-background active:text-foreground px-1 group flex flex-row items-center gap-1"
                     >
                       <Caret
                         className={`${
