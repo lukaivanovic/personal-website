@@ -52,13 +52,13 @@ export default function RootLayout({
           </div>
           <div className="flex flex-row items-center gap-3">
             <a
-              href="mailto:luka@lukaivanovic.com"
+              href="mailto:hi@ivanovicluka.co"
               className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
             >
               Send email
             </a>
             <a
-              href="https://x.com/lukaivanovic"
+              href="https://x.com/lukaivnvc"
               className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
             >
               Twitter
