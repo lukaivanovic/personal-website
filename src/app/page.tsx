@@ -29,12 +29,10 @@ export default function Home() {
       {/* WeWeb Editor */}
       <section className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
-          <h2>WeWeb Editor</h2>
+          <h2>Visual App Builder</h2>
           <p className="text-secondary">
-            WeWeb is a platform for building web applications where I joined as
-            the first design hire and transitioned towards design engineering in
-            my 3 year tenure. I was part of most core projects and learnt a lot
-            about startups and myself.
+            WeWeb is a platform for building complex web applications with
+            database conntections, comprehensive styling and workflow automation
           </p>
         </div>
         <div className="flex flex-col gap-2">
