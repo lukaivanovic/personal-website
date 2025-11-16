@@ -50,7 +50,7 @@ const CarouselDots: React.FC<CarouselDotsProps> = ({
       </div>
 
       {/* Dots Container with transparent background to show border */}
-      <div className="flex items-center justify-center gap-2 py-2 px-3 bg-white rounded-full relative z-10">
+      <div className="flex items-center justify-center gap-2 py-2 px-3 bg-background rounded-full relative z-10">
         {Array.from({ length: numberOfSlides }).map((_, index) => {
           const item = items[index];
           const isVideo = "fileName" in item;
@@ -81,7 +81,7 @@ const CarouselDots: React.FC<CarouselDotsProps> = ({
                   fill="currentColor"
                   viewBox="0 0 6 6"
                   className={`${
-                    isActive ? "text-neutral-400" : "text-neutral-400/40"
+                    isActive ? "text-foreground" : "text-foreground/40"
                   }`}
                 >
                   <path d="M5.107 2.691c.23.142.23.476 0 .618L.853 5.933A.363.363 0 0 1 .3 5.624V.376C.3.092.611-.082.853.067l4.254 2.624Z" />
@@ -91,8 +91,8 @@ const CarouselDots: React.FC<CarouselDotsProps> = ({
                 <div
                   className={`w-[6px] h-[6px] rounded-full  transition-colors duration-200 ${
                     isActive
-                      ? "bg-neutral-400  shadow-lg"
-                      : "bg-neutral-400/40  backdrop-blur-sm"
+                      ? "bg-foreground  shadow-lg"
+                      : "bg-foreground/40  backdrop-blur-sm"
                   }`}
                 />
               )}

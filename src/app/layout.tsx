@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import FloatingMenu from "@/components/FloatingMenu";
-import Navigation from "@/components/Navigation";
-import NavigationWithActiveState from "@/components/NavigationWithActiveState";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
+import ThemeSelect from "@/components/ThemeSelect";
 
 import "./globals.css";
-import Link from "next/link";
-import XLogo from "@/assets/XLogo";
+import Apollon from "@/assets/Apollon";
 
 export const metadata: Metadata = {
   title: "Luka Ivanovic",
@@ -47,101 +42,59 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={GeistSans.className}>
-      <head>
-        <Script
-          src="https://cdn.jsdelivr.net/npm/hls.js@latest"
-          strategy="beforeInteractive"
-        />
-      </head>
-      <body className="mx-auto grid  grid-cols-1 lg:grid-cols-[288px_1fr] gap-x-6 ">
-        <div className="bg-white pl-8 pr-4 lg:pr-[0]">
-          <div className="sticky top-0 flex flex-col lg:min-h-screen gap-4 py-8">
-            <div className="flex flex-col justify-between flex-1 gap-2">
-              {/* <div className="flex items-center gap-4 pb-12">
-                <Link href="/">
-                  <Image
-                    src="/logo-test.png"
-                    alt="Luka Ivanovic"
-                    width={200}
-                    height={200}
-                    className="h-8 w-auto"
-                  />
-                </Link>
-              </div> */}
-
-              <div className="flex flex-col gap-2">
-                <Navigation />
-
-                <h1 className=" mt-8">
-                  Function-first design engineer focused on solving real
-                  problems and shipping fast
-                </h1>
-                <p className="text-secondary mb-4">
-                  Previously worked with{" "}
-                  <a
-                    href="https://buena.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline-link"
-                  >
-                    Buena
-                  </a>
-                  ,{" "}
-                  <a
-                    href="https://weweb.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline-link"
-                  >
-                    WeWeb
-                  </a>
-                  ,{" "}
-                  <a
-                    href="https://weweb.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline-link"
-                  >
-                    Daytona
-                  </a>
-                  ,{" "}
-                  <a
-                    href="https://akkio.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline-link"
-                  >
-                    Akkio
-                  </a>
-                  .
-                </p>
+    <html lang="en" data-theme="hazelnut">
+      <body className="root">
+        <header className="fixed top-0 left-0 right-0 bg-background flex justify-between items-center px-4 pt-4 text-body container z-10">
+          <div className="flex flex-row items-center gap-2">
+            <Link href="/">
+              <Apollon className="size-10" />
+            </Link>
+          </div>
+          <div className="flex flex-row items-center gap-3">
+            <a
+              href="mailto:luka@lukaivanovic.com"
+              className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+            >
+              Send email
+            </a>
+            <a
+              href="https://x.com/lukaivanovic"
+              className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+            >
+              Twitter
+            </a>
+            <ThemeSelect />
+          </div>
+        </header>
+        <main className="bg-background flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container mt-24">
+          <div className="md:sticky md:top-20 flex flex-col gap-6 w-full md:w-64 shrink-0">
+            <div className="flex flex-col w-50">
+              <div className="flex flex-row justify-between text-caption uppercase">
+                <span>Luka Ivanovic</span>
+                <span>I.S.P.</span>
               </div>
-
-              <div className="flex flex-col gap-1">
-                <Link
-                  href="mailto:hi@ivanovicluka.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button-link flex-1"
-                >
-                  Send email
-                </Link>{" "}
-                <Link
-                  href="https://x.com/lukaivnvc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-link flex-1"
-                >
-                  <XLogo className="w-3 h-3 text-neutral-600 hover:text-neutral-900" />
-                </Link>
+              <div className="flex flex-row justify-between text-caption text-secondary uppercase">
+                <span>Independent</span>
+                <span>Software</span>
+                <span>Practice</span>
               </div>
             </div>
+            <div>
+              <h1 className="text-title mb-2">
+                Luka is an independent design engineer who partners with
+                companies on end-to-end projects including ideation, design and
+                development.
+              </h1>
+              <p className="text-secondary">
+                You can contact me via email by clicking here or copy the email
+                to clipboard. Past clients include Buena, WeWeb, Daytona and
+                Akkio. I'm also relatively active on X.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="py-4 px-8 bg-neutral-100">
-          <div className="max-w-[1100px] mx-auto">{children}</div>
-        </div>
+          <div>{children}</div>
+        </main>
+        <div className="h-3 bg-background fixed bottom-0 left-0 right-0 z-10 opacity-[0.01]"></div>
         <Analytics />
         <SpeedInsights />
       </body>
