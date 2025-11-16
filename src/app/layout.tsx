@@ -6,6 +6,7 @@ import Image from "next/image";
 import ThemeSelect from "@/components/ThemeSelect";
 
 import "./globals.css";
+import Apollon from "@/assets/Apollon";
 
 export const metadata: Metadata = {
   title: "Luka Ivanovic",
@@ -46,13 +47,7 @@ export default function RootLayout({
         <header className="bg-background flex justify-between items-center px-4 py-4 my-2 text-body container">
           <div className="flex flex-row items-center gap-2">
             <Link href="/">
-              <img
-                src="/logo-test.png"
-                alt="Luka Ivanovic"
-                width={200}
-                height={200}
-                className="size-12"
-              />
+              <Apollon className="size-10" />
             </Link>
           </div>
           <ThemeSelect />

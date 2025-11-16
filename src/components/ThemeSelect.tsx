@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Select } from "@base-ui-components/react/select";
+import Caret from "@/assets/Caret";
 
 const themes = [
   { label: "8-ball", value: "8-ball" },
@@ -46,8 +47,9 @@ export default function ThemeSelect() {
 
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
-      <Select.Trigger className="cursor-default">
+      <Select.Trigger className="cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background px-1">
         {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
+        <Caret className="rotate-90" />
       </Select.Trigger>
       <Select.Portal>
         <Select.Positioner
@@ -58,12 +60,18 @@ export default function ThemeSelect() {
         >
           <Select.Popup className="bg-foreground text-background text-body px-1">
             <Select.List className="relative py-1">
-              {themes.map(({ label, value }) => (
+              {themes.map(({ label, value: themeValue }) => (
                 <Select.Item
                   key={label}
-                  value={value}
-                  className="hover:bg-background hover:text-foreground px-1"
+                  value={themeValue}
+                  className="hover:bg-background hover:text-foreground px-1 group flex flex-row items-center gap-1"
                 >
+                  <Caret
+                    className={`${
+                      value === themeValue ? "visible" : "invisible"
+                    } group-hover:visible invisible transition-opacity duration-200`}
+                  />
+
                   <Select.ItemText>{label}</Select.ItemText>
                 </Select.Item>
               ))}
