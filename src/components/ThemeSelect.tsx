@@ -48,7 +48,7 @@ export default function ThemeSelect() {
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
       <Select.Trigger
-        className="cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background"
+        className="cursor-pointermd:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background"
         render={(props) => (
           <button {...props}>
             {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
@@ -69,9 +69,11 @@ export default function ThemeSelect() {
                 <Select.Item
                   key={label}
                   value={themeValue}
-                  className="hover:bg-background hover:text-foreground px-1 group flex flex-row items-center gap-1"
                   render={(props) => (
-                    <button {...props}>
+                    <button
+                      {...props}
+                      className="cursor-pointer md:cursor-default hover:bg-background hover:text-foreground px-1 group flex flex-row items-center gap-1"
+                    >
                       <Caret
                         className={`${
                           value === themeValue ? "visible" : "invisible"
