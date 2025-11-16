@@ -44,16 +44,30 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="hazelnut">
       <body className="root">
-        <header className="bg-background flex justify-between items-center px-4 py-4 my-2 text-body container">
+        <header className="fixed top-0 left-0 right-0 bg-background flex justify-between items-center px-4 pt-4 text-body container z-10">
           <div className="flex flex-row items-center gap-2">
             <Link href="/">
               <Apollon className="size-10" />
             </Link>
           </div>
-          <ThemeSelect />
+          <div className="flex flex-row items-center gap-3">
+            <a
+              href="mailto:luka@lukaivanovic.com"
+              className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+            >
+              Send email
+            </a>
+            <a
+              href="https://x.com/lukaivanovic"
+              className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+            >
+              Twitter
+            </a>
+            <ThemeSelect />
+          </div>
         </header>
-        <main className="bg-background flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container">
-          <div className="md:sticky md:top-8 flex flex-col gap-6 w-full md:w-64 shrink-0">
+        <main className="bg-background flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container mt-18">
+          <div className="md:sticky md:top-20 flex flex-col gap-6 w-full md:w-64 shrink-0">
             <div className="flex flex-col">
               <div className="flex flex-row justify-between text-caption uppercase">
                 <span>Luka Ivanovic</span>

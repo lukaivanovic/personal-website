@@ -72,7 +72,7 @@ export default function ThemeSelect() {
                   render={(props) => (
                     <button
                       {...props}
-                      className="cursor-pointer md:cursor-default hover:bg-background active:bg-background active:text-foreground px-1 group flex flex-row items-center gap-1"
+                      className="w-fullcursor-pointer md:cursor-default hover:bg-background hover:text-foreground active:bg-background active:text-foreground px-1 group flex flex-row items-center gap-1"
                     >
                       <Caret
                         className={`${
