@@ -56,10 +56,14 @@ export default function ThemeSelect() {
           alignItemWithTrigger={false}
           align="end"
         >
-          <Select.Popup className="bg-foreground text-background text-body px-2">
+          <Select.Popup className="bg-foreground text-background text-body px-1">
             <Select.List className="relative py-1">
               {themes.map(({ label, value }) => (
-                <Select.Item key={label} value={value}>
+                <Select.Item
+                  key={label}
+                  value={value}
+                  className="hover:bg-background hover:text-foreground px-1"
+                >
                   <Select.ItemText>{label}</Select.ItemText>
                 </Select.Item>
               ))}
