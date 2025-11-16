@@ -9,14 +9,14 @@ export default function Home() {
         <div className="flex flex-col gap-1">
           <h2>Buena.com</h2>
           <p className="text-secondary">
-            Property management firm that raised $58M Series A from Google
-            Ventures
+            New landing page for Buena celebrating the announcement of their
+            $58M Series A from Google Ventures
           </p>
           <a
             href="https://buena.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline-link text-caption"
+            className="underline-link text-caption mt-2"
           >
             Visit website
           </a>
