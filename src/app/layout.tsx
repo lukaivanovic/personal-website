@@ -66,7 +66,7 @@ export default function RootLayout({
             <ThemeSelect />
           </div>
         </header>
-        <main className="bg-background flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container mt-22">
+        <main className="bg-background flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-30 text-body container mt-24">
           <div className="md:sticky md:top-20 flex flex-col gap-6 w-full md:w-64 shrink-0">
             <div className="flex flex-col w-50">
               <div className="flex flex-row justify-between text-caption uppercase">

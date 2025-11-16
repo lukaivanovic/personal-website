@@ -66,7 +66,7 @@ h2 {
 
 [data-theme="hazelnut"] {
   --background: #eae7e1;
-  --foreground: #141a21;
+  --foreground: #363021;
   --foreground-secondary: color-mix(
     in srgb,
     var(--foreground) 72%,
@@ -77,6 +77,16 @@ h2 {
 [data-theme="strawberry"] {
   --background: #ffc8ea;
   --foreground: #ff2e00;
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
+}
+
+[data-theme="split"] {
+  --background: #002d57;
+  --foreground: #da0004;
   --foreground-secondary: color-mix(
     in srgb,
     var(--foreground) 72%,
