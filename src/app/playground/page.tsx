@@ -24,7 +24,7 @@ export default function Playground() {
             className="border border-neutral-100"
             aspectRatio="1/1"
           />
-          <VideoComponent fileName="material-maker-1" aspectRatio="1/1" />
+          <VideoComponent fileName="material-maker" aspectRatio="1/1" />
           <VideoComponent
             fileName="menu"
             className="border border-neutral-100"

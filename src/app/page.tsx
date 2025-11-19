@@ -131,7 +131,7 @@ export default function Home() {
               caption="Radial progress visual experiment"
             />
             <VideoWithCaption
-              url="material-maker-1"
+              url="material-maker"
               aspectRatio="1/1"
               caption="Material Maker node UI demo"
             />
