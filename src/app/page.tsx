@@ -1,5 +1,6 @@
 import Image from "next/image";
 import VideoPlayer from "@/components/video-player/VideoPlayer";
+import VideoWithCaption from "@/components/video-player/VideoWithCaption";
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="relative w-full aspect-video">
               <img
                 src="/weweb/main.png"
@@ -74,7 +75,7 @@ export default function Home() {
             input.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <VideoPlayer url="gymmy" aspectRatio="1/1" />
         </div>
       </section>
@@ -82,50 +83,50 @@ export default function Home() {
       {/* Playground */}
       <section className="grid grid-cols-3 gap-2">
         <div className="flex flex-col gap-2">
-          <div>
-            <VideoPlayer url="rive" aspectRatio="16/9" />
-            <span className="text-caption">
-              Rive interactive animation experiment
-            </span>
-          </div>
-          <div>
-            <VideoPlayer url="tsushima" aspectRatio="1/1" />
-            <span className="text-caption">
-              Tsushima character avatar UI prototype
-            </span>
-          </div>
-          <div>
-            <VideoPlayer url="ios-voice" aspectRatio="16/9" />
-            <span className="text-caption">
-              iOS voice command quick feature
-            </span>
-          </div>
+          <VideoWithCaption
+            url="rive"
+            aspectRatio="16/9"
+            caption="Rive interactive animation experiment"
+          />
+          <VideoWithCaption
+            url="tsushima"
+            aspectRatio="1/1"
+            caption="Tsushima character avatar UI prototype"
+          />
+          <VideoWithCaption
+            url="ios-voice"
+            aspectRatio="16/9"
+            caption="iOS voice command quick feature"
+          />
         </div>
         <div className="flex flex-col gap-2">
-          <div>
-            <VideoPlayer url="buena-sidebar-icons" aspectRatio="1/1" />
-            <span className="text-caption">Buena sidebar icon animation</span>
-          </div>
-          <div>
-            <VideoPlayer url="threejs" aspectRatio="16/9" />
-            <span className="text-caption">Three.js 3D playground scene</span>
-          </div>
-          <div>
-            <VideoPlayer url="menu" aspectRatio="5/4" />
-            <span className="text-caption">Animated radial menu prototype</span>
-          </div>
+          <VideoWithCaption
+            url="buena-sidebar-icons"
+            aspectRatio="1/1"
+            caption="Buena sidebar icon animation"
+          />
+          <VideoWithCaption
+            url="threejs"
+            aspectRatio="16/9"
+            caption="Three.js 3D playground scene"
+          />
+          <VideoWithCaption
+            url="menu"
+            aspectRatio="5/4"
+            caption="Animated radial menu prototype"
+          />
         </div>
         <div className="flex flex-col gap-2">
-          <div>
-            <VideoPlayer url="radial" aspectRatio="5/4" />
-            <span className="text-caption">
-              Radial progress visual experiment
-            </span>
-          </div>
-          <div>
-            <VideoPlayer url="material-maker-1" aspectRatio="1/1" />
-            <span className="text-caption">Material Maker node UI demo</span>
-          </div>
+          <VideoWithCaption
+            url="radial"
+            aspectRatio="5/4"
+            caption="Radial progress visual experiment"
+          />
+          <VideoWithCaption
+            url="material-maker-1"
+            aspectRatio="1/1"
+            caption="Material Maker node UI demo"
+          />
         </div>
       </section>
     </div>
