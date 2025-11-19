@@ -80,7 +80,7 @@ export default function RootLayout({
         </header>
         <main className=" flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-20 text-body container mt-24">
           <div className="md:sticky md:top-20 flex flex-col items-start gap-4 w-full md:w-76 shrink-0">
-            <h1 className="text-title">
+            <h1>
               Luka is an independent design engineer who partners with companies
               on end-to-end projects.
             </h1>

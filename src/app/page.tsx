@@ -81,52 +81,61 @@ export default function Home() {
       </section>
 
       {/* Playground */}
-      <section className="grid grid-cols-3 gap-2">
-        <div className="flex flex-col gap-2">
-          <VideoWithCaption
-            url="rive"
-            aspectRatio="16/9"
-            caption="Rive interactive animation experiment"
-          />
-          <VideoWithCaption
-            url="tsushima"
-            aspectRatio="1/1"
-            caption="Tsushima character avatar UI prototype"
-          />
-          <VideoWithCaption
-            url="ios-voice"
-            aspectRatio="16/9"
-            caption="iOS voice command quick feature"
-          />
+
+      <section className="flex flex-col gap-6">
+        <div className="flex flex-col gap-1">
+          <h2>Playground</h2>
+          <p className="text-secondary">
+            This is where you will find some of my experiments and prototypes.
+          </p>
         </div>
-        <div className="flex flex-col gap-2">
-          <VideoWithCaption
-            url="buena-sidebar-icons"
-            aspectRatio="1/1"
-            caption="Buena sidebar icon animation"
-          />
-          <VideoWithCaption
-            url="threejs"
-            aspectRatio="16/9"
-            caption="Three.js 3D playground scene"
-          />
-          <VideoWithCaption
-            url="menu"
-            aspectRatio="5/4"
-            caption="Animated radial menu prototype"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <VideoWithCaption
-            url="radial"
-            aspectRatio="5/4"
-            caption="Radial progress visual experiment"
-          />
-          <VideoWithCaption
-            url="material-maker-1"
-            aspectRatio="1/1"
-            caption="Material Maker node UI demo"
-          />
+        <div className="grid grid-cols-3 gap-2">
+          <div className="flex flex-col gap-2">
+            <VideoWithCaption
+              url="rive"
+              aspectRatio="16/9"
+              caption="Rive interactive animation experiment"
+            />
+            <VideoWithCaption
+              url="tsushima"
+              aspectRatio="1/1"
+              caption="Tsushima character avatar UI prototype"
+            />
+            <VideoWithCaption
+              url="ios-voice"
+              aspectRatio="16/9"
+              caption="iOS voice command quick feature"
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <VideoWithCaption
+              url="buena-sidebar-icons"
+              aspectRatio="1/1"
+              caption="Buena sidebar icon animation"
+            />
+            <VideoWithCaption
+              url="threejs"
+              aspectRatio="16/9"
+              caption="Three.js 3D playground scene"
+            />
+            <VideoWithCaption
+              url="menu"
+              aspectRatio="5/4"
+              caption="Animated radial menu prototype"
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <VideoWithCaption
+              url="radial"
+              aspectRatio="5/4"
+              caption="Radial progress visual experiment"
+            />
+            <VideoWithCaption
+              url="material-maker-1"
+              aspectRatio="1/1"
+              caption="Material Maker node UI demo"
+            />
+          </div>
         </div>
       </section>
     </div>
