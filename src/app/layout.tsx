@@ -123,7 +123,6 @@ export default function RootLayout({
           </div>
           <div>{children}</div>
         </main>
-        <div className="h-3.5 bg-background fixed bottom-0 left-0 right-0 z-10"></div>
         <Analytics />
         <SpeedInsights />
       </body>
