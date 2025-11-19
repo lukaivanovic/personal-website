@@ -5,10 +5,12 @@ import { Select } from "@base-ui-components/react/select";
 import Caret from "@/assets/Caret";
 
 const themes = [
+  { label: "Vanilla", value: "vanilla" },
   { label: "8-ball", value: "8-ball" },
   { label: "Strawberry", value: "strawberry" },
   { label: "Cool Blue", value: "cool-blue" },
   { label: "Hazelnut", value: "hazelnut" },
+  { label: "Jujutsu", value: "jujutsu" },
 ];
 
 function setTheme(theme: string) {
@@ -26,8 +28,8 @@ function setTheme(theme: string) {
 }
 
 function getCurrentTheme(): string {
-  if (typeof document === "undefined") return "hazelnut";
-  return document.documentElement.getAttribute("data-theme") || "hazelnut";
+  if (typeof document === "undefined") return " vanilla";
+  return document.documentElement.getAttribute("data-theme") || "vanilla";
 }
 
 export default function ThemeSelect() {
@@ -51,7 +53,7 @@ export default function ThemeSelect() {
         nativeButton={true}
         className="cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background"
       >
-        {themes.find((theme) => theme.value === value)?.label || "Hazelnut"}
+        {themes.find((theme) => theme.value === value)?.label || "Vanilla"}
         <Caret className="rotate-90" />
       </Select.Trigger>
       <Select.Portal>
