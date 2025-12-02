@@ -11,7 +11,7 @@ const themes = [
   { label: "Cool Blue", value: "cool-blue" },
   { label: "Hazelnut", value: "hazelnut" },
   { label: "Jujutsu", value: "jujutsu" },
-  { label: "Shader", value: "shader" },
+  { label: "Enigma", value: "shader" },
 ];
 
 function setTheme(theme: string) {
