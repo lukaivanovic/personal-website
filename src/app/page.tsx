@@ -7,17 +7,23 @@ export default function Home() {
     <div className="min-h-screen space-y-20 lg:space-y-20 pb-[240px] mx-auto max-w-4xl">
       {/* Buena website */}
       <section className="flex flex-col gap-6">
-        <div className="flex flex-col gap-1">
-          <h2>Profound Shopping</h2>
-          <p className="text-secondary">
-            Collaboration with Profound on their new shopping analytics
-            experience.
-          </p>
+        <div className="flex flex-row items-center gap-2">
+          <div className="flex items-center justify-center size-8 bg-black">
+            <ProfoundLogo className="size-4 text-white" />
+          </div>
+
+          <div className="flex flex-col">
+            <h2>Profound Shopping</h2>
+            <p className="text-secondary">
+              Collaboration with Profound on their new shopping analytics
+              experience.
+            </p>
+          </div>
           <a
             href="https://www.tryprofound.com/features/shopping"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline-link text-caption mt-2"
+            className="underline-link  ml-auto text-secondary hover:text-foreground"
           >
             See more
           </a>
