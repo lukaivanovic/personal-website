@@ -8,6 +8,7 @@ import BookACall from "@/components/BookACall";
 
 import "./globals.css";
 import Apollon from "@/assets/Apollon";
+import ShaderBackgroundWrapper from "@/components/ShaderBackgroundWrapper";
 
 export const metadata: Metadata = {
   title: "Luka Ivanovic",
@@ -43,8 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="vanilla" className="[scrollbar-gutter:stable]">
+    <html lang="en" data-theme="hazelnut" className="[scrollbar-gutter:stable]">
       <body className="root ">
+        <ShaderBackgroundWrapper />
         <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-4 pt-4 pb-1 text-body container z-10">
           <div className="flex flex-row items-center gap-2">
             <Link href="/" className="flex flex-row items-center gap-2">
@@ -78,9 +80,9 @@ export default function RootLayout({
             <ThemeSelect />
           </div>
         </header>
-        <main className=" flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-20 text-body container mt-24">
+        <main className="flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-20 text-body container mt-24">
           <div className="md:sticky md:top-20 flex flex-col items-start gap-4 w-full md:w-76 shrink-0">
-            <h1>
+            <h1 className="text-title">
               Luka is an independent design engineer who partners with companies
               on end-to-end projects.
             </h1>
@@ -121,7 +123,7 @@ export default function RootLayout({
               </a>
             </div>
           </div>
-          <div>{children}</div>
+          {children}
         </main>
         <Analytics />
         <SpeedInsights />

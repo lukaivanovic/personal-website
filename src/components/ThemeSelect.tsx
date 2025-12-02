@@ -11,6 +11,7 @@ const themes = [
   { label: "Cool Blue", value: "cool-blue" },
   { label: "Hazelnut", value: "hazelnut" },
   { label: "Jujutsu", value: "jujutsu" },
+  { label: "Shader", value: "shader" },
 ];
 
 function setTheme(theme: string) {
@@ -28,8 +29,8 @@ function setTheme(theme: string) {
 }
 
 function getCurrentTheme(): string {
-  if (typeof document === "undefined") return " vanilla";
-  return document.documentElement.getAttribute("data-theme") || "vanilla";
+  if (typeof document === "undefined") return "hazelnut";
+  return document.documentElement.getAttribute("data-theme") || "hazelnut";
 }
 
 export default function ThemeSelect() {
@@ -49,10 +50,7 @@ export default function ThemeSelect() {
 
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
-      <Select.Trigger
-        nativeButton={true}
-        className="cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background"
-      >
+      <Select.Trigger className="cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background">
         {themes.find((theme) => theme.value === value)?.label || "Vanilla"}
         <Caret className="rotate-90" />
       </Select.Trigger>
@@ -69,21 +67,16 @@ export default function ThemeSelect() {
                 <Select.Item
                   key={label}
                   value={themeValue}
-                  render={(props) => (
-                    <button
-                      {...props}
-                      className="w-fullcursor-pointer md:cursor-default hover:bg-background hover:text-foreground active:bg-background active:text-foreground px-1 group flex flex-row items-center gap-1"
-                    >
-                      <Caret
-                        className={`${
-                          value === themeValue ? "visible" : "invisible"
-                        } group-hover:visible invisible transition-opacity duration-200`}
-                      />
+                  className="w-full cursor-pointer md:cursor-default hover:bg-background hover:text-foreground active:bg-background active:text-foreground px-1 group flex flex-row items-center gap-1"
+                >
+                  <Caret
+                    className={`${
+                      value === themeValue ? "visible" : "invisible"
+                    } group-hover:visible invisible transition-opacity duration-200`}
+                  />
 
-                      <Select.ItemText>{label}</Select.ItemText>
-                    </button>
-                  )}
-                />
+                  <Select.ItemText>{label}</Select.ItemText>
+                </Select.Item>
               ))}
             </Select.List>
           </Select.Popup>

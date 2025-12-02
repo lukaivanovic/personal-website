@@ -4,7 +4,33 @@ import VideoWithCaption from "@/components/video-player/VideoWithCaption";
 
 export default function Home() {
   return (
-    <div className="min-h-screen space-y-20 lg:space-y-20 pb-[240px]">
+    <div className="min-h-screen space-y-20 lg:space-y-20 pb-[240px] mx-auto max-w-4xl">
+      {/* Buena website */}
+      <section className="flex flex-col gap-6">
+        <div className="flex flex-col gap-1">
+          <h2>Profound Shopping</h2>
+          <p className="text-secondary">
+            Collaboration with Profound on their new shopping analytics
+            experience.
+          </p>
+          <a
+            href="https://www.tryprofound.com/features/shopping"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-link text-caption mt-2"
+          >
+            See more
+          </a>
+        </div>
+        <div className="relative w-full aspect-video overflow-hidden">
+          <img
+            src="/profound-shopping2.webp"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
       {/* Buena website */}
       <section className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
@@ -35,6 +61,14 @@ export default function Home() {
             WeWeb is a platform for building complex web applications with
             database conntections, comprehensive styling and workflow automation
           </p>
+          <a
+            href="https://buena.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-link text-caption mt-2"
+          >
+            Visit website
+          </a>
         </div>
         <div className="flex flex-col gap-2">
           <div className="relative w-full aspect-video">
@@ -46,16 +80,16 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="relative w-full aspect-video">
+            <div className="relative w-full h-full row-span-2 overflow-hidden">
               <img
-                src="/weweb/main.png"
+                src="/weweb/workflows-new.png"
                 alt="Manage your app logic and data from a single place"
-                className="object-cover"
+                className="h-full w-full object-cover "
               />
             </div>
             <div className="relative w-full aspect-video">
               <img
-                src="/weweb/workflows.png"
+                src="/weweb/editor-new.png"
                 alt="Build your logic and automation with the workflow editor"
                 className="object-cover"
               />
@@ -67,7 +101,7 @@ export default function Home() {
       </section>
 
       {/* Gymmy */}
-      <section className="flex flex-col gap-6">
+      {/* <section className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
           <h2>Gymmy</h2>
           <p className="text-secondary">
@@ -78,7 +112,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <VideoPlayer url="gymmy" aspectRatio="1/1" />
         </div>
-      </section>
+      </section> */}
 
       {/* Playground */}
 
@@ -89,52 +123,62 @@ export default function Home() {
             This is where you will find some of my experiments and prototypes.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-2">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <VideoWithCaption
-              url="rive"
-              aspectRatio="16/9"
-              caption="Rive interactive animation experiment"
-            />
-            <VideoWithCaption
-              url="tsushima"
+              url="gymmy"
               aspectRatio="1/1"
-              caption="Tsushima character avatar UI prototype"
+              caption="Hobby application for tracking your workouts using your voice as input."
             />
-            <VideoWithCaption
-              url="ios-voice"
-              aspectRatio="16/9"
-              caption="iOS voice command quick feature"
-            />
-          </div>
-          <div className="flex flex-col gap-2">
             <VideoWithCaption
               url="buena-sidebar-icons"
               aspectRatio="1/1"
               caption="Buena sidebar icon animation"
             />
-            <VideoWithCaption
-              url="threejs"
-              aspectRatio="16/9"
-              caption="Three.js 3D playground scene"
-            />
-            <VideoWithCaption
-              url="menu"
-              aspectRatio="5/4"
-              caption="Animated radial menu prototype"
-            />
           </div>
-          <div className="flex flex-col gap-2">
-            <VideoWithCaption
-              url="radial"
-              aspectRatio="5/4"
-              caption="Radial progress visual experiment"
-            />
-            <VideoWithCaption
-              url="material-maker"
-              aspectRatio="1/1"
-              caption="Material Maker node UI demo"
-            />
+          <div className="grid grid-cols-3 gap-2">
+            <div className="flex flex-col gap-2">
+              <VideoWithCaption
+                url="radial"
+                aspectRatio="5/4"
+                caption="Radial progress visual experiment"
+              />
+
+              <VideoWithCaption
+                url="tsushima"
+                aspectRatio="1/1"
+                caption="Tsushima character avatar UI prototype"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <VideoWithCaption
+                url="menu"
+                aspectRatio="5/4"
+                caption="Animated radial menu prototype"
+              />
+              <VideoWithCaption
+                url="rive"
+                aspectRatio="16/9"
+                caption="Rive interactive animation experiment"
+              />
+              <VideoWithCaption
+                url="ios-voice"
+                aspectRatio="16/9"
+                caption="iOS voice command quick feature"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <VideoWithCaption
+                url="material-maker"
+                aspectRatio="1/1"
+                caption="Material Maker node UI demo"
+              />
+              <VideoWithCaption
+                url="threejs"
+                aspectRatio="16/9"
+                caption="Three.js 3D playground scene"
+              />
+            </div>
           </div>
         </div>
       </section>
