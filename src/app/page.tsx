@@ -1,6 +1,7 @@
 import Image from "next/image";
 import VideoPlayer from "@/components/video-player/VideoPlayer";
 import VideoWithCaption from "@/components/video-player/VideoWithCaption";
+import ProfoundLogo from "@/assets/ProfoundLogo";
 
 export default function Home() {
   return (
