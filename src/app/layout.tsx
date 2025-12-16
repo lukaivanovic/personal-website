@@ -52,7 +52,7 @@ export default function RootLayout({
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-9" />
             </Link>
-            <div className="flex flex-row md:flex-col gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <h1 className="text-title max-w-72 text-pretty">
                 Luka is an independent design engineer who partners with
                 companies on end-to-end projects.
@@ -79,19 +79,20 @@ export default function RootLayout({
           </div>
           <div className="flex flex-row items-center justify-end gap-3 h-9 w-full md:w-auto">
             <ThemeSelect />
-            <a
-              href="mailto:hi@ivanovicluka.co"
-              className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
-            >
-              Send email
-            </a>
+
             <a
               href="https://x.com/lukaivnvc"
               className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
             >
-              Twitter
+              X
             </a>
-            <BookACall />
+            <a
+              href="mailto:hi@ivanovicluka.co"
+              className="px-1 bg-foreground text-background hover:bg-background hover:text-foreground active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+            >
+              Send email
+            </a>
+            {/* <BookACall /> */}
           </div>
         </header>
         {children}
