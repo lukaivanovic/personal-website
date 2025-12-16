@@ -52,7 +52,7 @@ export default function RootLayout({
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-9" />
             </Link>
-            <div className="flex  gap-2">
+            <div className="flex flex-row md:flex-col gap-2">
               <h1 className="text-title max-w-72 text-pretty">
                 Luka is an independent design engineer who partners with
                 companies on end-to-end projects.
