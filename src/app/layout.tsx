@@ -45,26 +45,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="hazelnut" className="[scrollbar-gutter:stable]">
-      <body className="root ">
+      <body>
         <ShaderBackgroundWrapper />
-        <header className="flex justify-between items-center pt-4 text-body container ">
-          <div className="flex flex-row items-center gap-2">
+        <header className="flex flex-col-reverse md:flex-row justify-between items-start pt-4 text-body container pb-40 gap-y-3">
+          <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-9" />
-              {/* <div className="flex-col hidden md:flex gap-0">
-                <div className="flex font-medium gap-1 flex-row">
-                  <span>Luka Ivanovic</span>
-                  <span>I.S.P.</span>
-                </div>
-                <div className="flex flex-row gap-1 text-caption text-secondary">
-                  <span>Independent</span>
-                  <span>Software</span>
-                  <span>Practice</span>
-                </div>
-              </div> */}
             </Link>
+            <h1 className="text-title max-w-72 text-pretty">
+              Luka is an independent design engineer who partners with companies
+              on end-to-end projects.
+            </h1>
+            <p className="text-secondary max-w-72 text-pretty">
+              I love working by starting with messy ideas on paper or Figma and
+              quickly moving to code canvas with Cursor. Posts like these ones
+              from{" "}
+              <a
+                href="https://x.com/karrisaarinen/status/1715085201653805116"
+                className="underline cursor-default hover:text-foreground"
+              >
+                Karri Saarinen
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://x.com/ryolu_/status/1990057444253241545"
+                className="underline cursor-default hover:text-foreground"
+              >
+                Ryo Lu
+              </a>{" "}
+              reflect very well on how I view current design work.
+            </p>
           </div>
-          <div className="flex flex-row items-center gap-3">
+          <div className="flex flex-row items-center justify-end gap-3 h-9 w-full md:w-auto">
+            <ThemeSelect />
             <a
               href="mailto:hi@ivanovicluka.co"
               className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
@@ -77,51 +90,9 @@ export default function RootLayout({
             >
               Twitter
             </a>
-            <ThemeSelect />
+            <BookACall />
           </div>
         </header>
-        <section className="flex flex-col items-start gap-4 w-full shrink-0 container min-h-70">
-          <h1 className="text-title">
-            Luka is an independent design engineer who partners with companies
-            on end-to-end projects.
-          </h1>
-          <p className="text-secondary">
-            I love working by starting with messy ideas on paper or Figma and
-            quickly moving to code canvas with Cursor.
-          </p>
-          <p className="text-secondary">
-            Tweets like this one from{" "}
-            <a
-              href="https://x.com/karrisaarinen/status/1715085201653805116"
-              className="underline cursor-default hover:text-foreground"
-            >
-              Karri Saarinen (CEO @ linear)
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://x.com/ryolu_/status/1990057444253241545"
-              className="underline cursor-default hover:text-foreground"
-            >
-              Ryo Lu (Head of Design & Cursor)
-            </a>{" "}
-            resonate with me.
-          </p>
-          {/* <p className="text-secondary">
-            Currently working on an AI analytics tool and a better code review
-            tool. Previous projects and clients include companies like Akkio,
-            Buena, Daytona, WeWeb, UBS and more.
-          </p> */}
-          <p className="text-secondary">Available for new projects.</p>
-          <div className="flex flex-row gap-2">
-            <BookACall />
-            <a
-              href="mailto:hi@ivanovicluka.co"
-              className="bg-background text-secondary hover:bg-foreground hover:text-background px-1"
-            >
-              Send email
-            </a>
-          </div>
-        </section>
         {children}
         <Analytics />
         <SpeedInsights />

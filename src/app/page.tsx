@@ -5,7 +5,7 @@ import ProfoundLogo from "@/assets/ProfoundLogo";
 
 export default function Home() {
   return (
-    <main className="min-h-screen space-y-20 lg:space-y-20 pb-[240px] container grid grid-cols-2 gap-6">
+    <main className="min-h-screen pb-[240px] container grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4">
       {/* Profound Shopping */}
       <section className="flex flex-col gap-2">
         <div className="relative w-full aspect-video overflow-hidden">
@@ -50,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* WeWeb Editor */}
-      <section className="flex flex-col gap-6 col-span-2">
+      <section className="flex flex-col gap-6 md:col-span-2">
         <div className="flex flex-col gap-1">
           <h2>WeWeb Editor</h2>
           <p className="text-secondary">
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Playground */}
-      <section className="flex flex-col gap-6 col-span-2">
+      <section className="flex flex-col gap-6 md:col-span-2">
         <div className="flex flex-col gap-1">
           <h2>Playground</h2>
           <p className="text-secondary">
