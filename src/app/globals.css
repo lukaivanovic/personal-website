@@ -41,8 +41,7 @@
   text-transform: uppercase;
 }
 
-h1,
-h2 {
+h1 {
   font-size: 15px;
   font-weight: 500;
 }
@@ -162,6 +161,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
   position: relative;
+  font-size: 11px;
 }
 
 @utility underline-link {
@@ -173,7 +173,7 @@ body {
 }
 
 @utility button-link {
-  @apply border border-transparent bg-[#000000] rounded-full px-2 py-1 flex flex-row items-center justify-center gap-2 h-8 text-foreground;
+  @apply border border-transparent bg-black rounded-full px-2 py-1 flex flex-row items-center justify-center gap-2 h-8 text-foreground;
 }
 
 /* View Transitions */

@@ -5,30 +5,9 @@ import ProfoundLogo from "@/assets/ProfoundLogo";
 
 export default function Home() {
   return (
-    <div className="min-h-screen space-y-20 lg:space-y-20 pb-[240px] mx-auto max-w-4xl">
-      {/* Buena website */}
-      <section className="flex flex-col gap-6">
-        <div className="flex flex-row items-center gap-2">
-          <div className="flex items-center justify-center size-8 bg-black">
-            <ProfoundLogo className="size-4 text-white" />
-          </div>
-
-          <div className="flex flex-col">
-            <h2>Profound Shopping</h2>
-            <p className="text-secondary">
-              Collaboration with Profound on their new shopping analytics
-              experience.
-            </p>
-          </div>
-          <a
-            href="https://www.tryprofound.com/features/shopping"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline-link  ml-auto text-secondary hover:text-foreground"
-          >
-            See more
-          </a>
-        </div>
+    <main className="min-h-screen space-y-20 lg:space-y-20 pb-[240px] container grid grid-cols-2 gap-6">
+      {/* Profound Shopping */}
+      <section className="flex flex-col gap-2">
         <div className="relative w-full aspect-video overflow-hidden">
           <img
             src="/profound-shopping2.webp"
@@ -36,32 +15,42 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
         </div>
+        <p className="text-secondary max-w-88 text-pretty">
+          Built the brand new{" "}
+          <a
+            href="https://www.tryprofound.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground hover:text-secondary underline underline-offset-2"
+          >
+            Profound
+          </a>{" "}
+          Shopping analytics package which provides an extremely detailed view
+          into ChatGPT's shopping results.
+        </p>
       </section>
 
       {/* Buena website */}
-      <section className="flex flex-col gap-6">
-        <div className="flex flex-col gap-1">
-          <h2>Buena.com</h2>
-          <p className="text-secondary">
-            New landing page for Buena celebrating the announcement of their
-            $58M Series A from Google Ventures
-          </p>
+      <section className="flex flex-col gap-2">
+        <div>
+          <VideoPlayer url="buena" aspectRatio="16/9" />
+        </div>
+        <p className="text-secondary max-w-70 text-pretty">
+          Built and designed the new{" "}
           <a
             href="https://buena.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline-link text-caption mt-2"
+            className="text-foreground hover:text-secondary underline underline-offset-2"
           >
-            Visit website
-          </a>
-        </div>
-        <div>
-          <VideoPlayer url="buena" aspectRatio="16/9" />
-        </div>
+            buena.com
+          </a>{" "}
+          website celebrating their $58M Series A.
+        </p>
       </section>
 
       {/* WeWeb Editor */}
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col gap-6 col-span-2">
         <div className="flex flex-col gap-1">
           <h2>WeWeb Editor</h2>
           <p className="text-secondary">
@@ -107,23 +96,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gymmy */}
-      {/* <section className="flex flex-col gap-6">
-        <div className="flex flex-col gap-1">
-          <h2>Gymmy</h2>
-          <p className="text-secondary">
-            Hobby application for tracking your workouts using your voice as
-            input.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <VideoPlayer url="gymmy" aspectRatio="1/1" />
-        </div>
-      </section> */}
-
       {/* Playground */}
-
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col gap-6 col-span-2">
         <div className="flex flex-col gap-1">
           <h2>Playground</h2>
           <p className="text-secondary">
@@ -189,6 +163,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

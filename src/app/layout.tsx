@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en" data-theme="hazelnut" className="[scrollbar-gutter:stable]">
       <body className="root ">
         <ShaderBackgroundWrapper />
-        <header className="fixed top-0 left-0 right-0 flex justify-between items-center px-4 pt-4 pb-1 text-body container z-10">
+        <header className="flex justify-between items-center pt-4 text-body container ">
           <div className="flex flex-row items-center gap-2">
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-9" />
@@ -80,51 +80,49 @@ export default function RootLayout({
             <ThemeSelect />
           </div>
         </header>
-        <main className="flex flex-col items-start md:flex-row justify-between gap-y-20 md:gap-y-6 md:gap-x-20 text-body container mt-24">
-          <div className="md:sticky md:top-20 flex flex-col items-start gap-4 w-full md:w-76 shrink-0">
-            <h1 className="text-title">
-              Luka is an independent design engineer who partners with companies
-              on end-to-end projects.
-            </h1>
-            <p className="text-secondary">
-              I love working by starting with messy ideas on paper or Figma and
-              quickly moving to code canvas with Cursor.
-            </p>
-            <p className="text-secondary">
-              Tweets like this one from{" "}
-              <a
-                href="https://x.com/karrisaarinen/status/1715085201653805116"
-                className="underline cursor-default hover:text-foreground"
-              >
-                Karri Saarinen (CEO @ linear)
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://x.com/ryolu_/status/1990057444253241545"
-                className="underline cursor-default hover:text-foreground"
-              >
-                Ryo Lu (Head of Design & Cursor)
-              </a>{" "}
-              resonate with me.
-            </p>
-            <p className="text-secondary">
-              Currently working on an AI analytics tool and a better code review
-              tool. Previous projects and clients include companies like Akkio,
-              Buena, Daytona, WeWeb, UBS and more.
-            </p>
-            <p className="text-secondary">Available for new projects.</p>
-            <div className="flex flex-row gap-2">
-              <BookACall />
-              <a
-                href="mailto:hi@ivanovicluka.co"
-                className="bg-background text-secondary hover:bg-foreground hover:text-background px-1"
-              >
-                Send email
-              </a>
-            </div>
+        <section className="flex flex-col items-start gap-4 w-full shrink-0 container min-h-70">
+          <h1 className="text-title">
+            Luka is an independent design engineer who partners with companies
+            on end-to-end projects.
+          </h1>
+          <p className="text-secondary">
+            I love working by starting with messy ideas on paper or Figma and
+            quickly moving to code canvas with Cursor.
+          </p>
+          <p className="text-secondary">
+            Tweets like this one from{" "}
+            <a
+              href="https://x.com/karrisaarinen/status/1715085201653805116"
+              className="underline cursor-default hover:text-foreground"
+            >
+              Karri Saarinen (CEO @ linear)
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://x.com/ryolu_/status/1990057444253241545"
+              className="underline cursor-default hover:text-foreground"
+            >
+              Ryo Lu (Head of Design & Cursor)
+            </a>{" "}
+            resonate with me.
+          </p>
+          {/* <p className="text-secondary">
+            Currently working on an AI analytics tool and a better code review
+            tool. Previous projects and clients include companies like Akkio,
+            Buena, Daytona, WeWeb, UBS and more.
+          </p> */}
+          <p className="text-secondary">Available for new projects.</p>
+          <div className="flex flex-row gap-2">
+            <BookACall />
+            <a
+              href="mailto:hi@ivanovicluka.co"
+              className="bg-background text-secondary hover:bg-foreground hover:text-background px-1"
+            >
+              Send email
+            </a>
           </div>
-          {children}
-        </main>
+        </section>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>
