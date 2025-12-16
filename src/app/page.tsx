@@ -5,7 +5,7 @@ import ProfoundLogo from "@/assets/ProfoundLogo";
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-[240px] container grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-4">
+    <main className="min-h-screen pb-[240px] container grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-4 md:gap-y-20">
       {/* Profound Shopping */}
       <section className="flex flex-col gap-2">
         <div className="relative w-full aspect-video overflow-hidden">
@@ -51,48 +51,36 @@ export default function Home() {
 
       {/* WeWeb Editor */}
       <section className="flex flex-col gap-6 md:col-span-2">
-        <div className="flex flex-col gap-1">
-          <h2>WeWeb Editor</h2>
-          <p className="text-secondary">
-            WeWeb is a platform for building complex web applications with
-            database conntections, comprehensive styling and workflow automation
-          </p>
-          <a
-            href="https://buena.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline-link text-caption mt-2"
-          >
-            Visit website
-          </a>
-        </div>
-        <div className="flex flex-col gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="relative w-full aspect-video">
             <img
-              src="/weweb/edition-panel.png"
+              src="/weweb/editor-new.png"
               alt="Create states, components or edit your elements visually"
               className="object-cover"
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="relative w-full h-full row-span-2 overflow-hidden">
-              <img
-                src="/weweb/workflows-new.png"
-                alt="Manage your app logic and data from a single place"
-                className="h-full w-full object-cover "
-              />
-            </div>
-            <div className="relative w-full aspect-video">
-              <img
-                src="/weweb/editor-new.png"
-                alt="Build your logic and automation with the workflow editor"
-                className="object-cover"
-              />
-            </div>
-
-            <VideoPlayer url="ww-ai" aspectRatio="16/10" />
+          <div className="relative w-full h-fulloverflow-hidden">
+            <img
+              src="/weweb/workflows.png"
+              alt="Manage your app logic and data from a single place"
+              className="h-full w-full object-cover "
+            />
           </div>
+          <div className="relative w-full aspect-video">
+            <img
+              src="/weweb/edition-panel.png"
+              alt="Build your logic and automation with the workflow editor"
+              className="object-cover"
+            />
+          </div>
+
+          <VideoPlayer url="ww-ai" aspectRatio="16/10" />
+
+          <p className="text-foreground max-w-72 text-pretty">
+            WeWeb is a platform for building complex web applications with
+            database conntections, comprehensive styling and workflow automation
+          </p>
         </div>
       </section>
 

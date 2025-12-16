@@ -52,29 +52,30 @@ export default function RootLayout({
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-9" />
             </Link>
-            <h1 className="text-title max-w-72 text-pretty">
-              Luka is an independent design engineer who partners with companies
-              on end-to-end projects.
-            </h1>
-            <p className="text-secondary max-w-72 text-pretty">
-              I love working by starting with messy ideas on paper or Figma and
-              quickly moving to code canvas with Cursor. Posts like these ones
-              from{" "}
-              <a
-                href="https://x.com/karrisaarinen/status/1715085201653805116"
-                className="underline cursor-default hover:text-foreground"
-              >
-                Karri Saarinen
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://x.com/ryolu_/status/1990057444253241545"
-                className="underline cursor-default hover:text-foreground"
-              >
-                Ryo Lu
-              </a>{" "}
-              reflect very well on how I view current design work.
-            </p>
+            <div className="flex  gap-2">
+              <h1 className="text-title max-w-72 text-pretty">
+                Luka is an independent design engineer who partners with
+                companies on end-to-end projects.
+              </h1>
+              <p className="text-secondary max-w-140 text-pretty">
+                I love working by using paper or Figma canvas to explore ideas,
+                but moving to code to test my ideas. Posts like these ones from{" "}
+                <a
+                  href="https://x.com/karrisaarinen/status/1715085201653805116"
+                  className="underline cursor-default hover:text-foreground"
+                >
+                  Karri Saarinen
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://x.com/ryolu_/status/1990057444253241545"
+                  className="underline cursor-default hover:text-foreground"
+                >
+                  Ryo Lu
+                </a>{" "}
+                reflect very well on how I view current design work.
+              </p>
+            </div>
           </div>
           <div className="flex flex-row items-center justify-end gap-3 h-9 w-full md:w-auto">
             <ThemeSelect />
