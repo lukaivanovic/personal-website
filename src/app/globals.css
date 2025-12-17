@@ -157,7 +157,6 @@ body {
   font-family: "TWK Lausanne", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
   position: relative;
   font-size: 12px;
 }
