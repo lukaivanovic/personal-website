@@ -39,11 +39,6 @@
   text-transform: uppercase;
 }
 
-h1 {
-  font-size: 14px;
-  font-weight: 500;
-}
-
 [data-theme="8-ball"] {
   --background: #000000;
   --foreground: #ffffff;
@@ -153,10 +148,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  text-rendering: optimizeLegibility;
   font-family: "TWK Lausanne", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   position: relative;
   font-size: 12px;
 }

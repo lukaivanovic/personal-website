@@ -53,9 +53,15 @@ export default function RootLayout({
               <Apollon className="size-9" />
             </Link>
             <div className="flex flex-col md:flex-row gap-2">
-              <h1 className="text-title max-w-72 text-pretty">
-                Luka is an independent design engineer who partners with
-                companies on end-to-end projects.
+              <h1 className="text-base font-medium w-3/4 text-justify text-pretty">
+                Dr. Ing. h.c. F. Porsche AG, commonly known as Porsche,[a] is a
+                German automobile manufacturer specializing in luxury,
+                high-performance sports cars, SUVs and sedans, headquartered in
+                Stuttgart, Baden-Württemberg, Germany. The company is owned by
+                Volkswagen AG, a controlling stake of which is owned by Porsche
+                Automobil Holding SE, usually shortened to Porsche SE. Porsche's
+                current lineup includes the 911, Panamera, Macan, Cayenne and
+                Taycan.
               </h1>
               <p className="text-secondary max-w-140 text-pretty">
                 I love working by using paper or Figma canvas to explore ideas,
