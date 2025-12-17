@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main className="min-h-screen pb-[240px] container flex flex-col gap-12 md:gap-x-4 md:gap-y-20">
       {/* Profound Shopping */}
-      <section className="grid grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary max-w-88 text-pretty">
+      <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
+        <p className="text-secondary max-w-88 text-pretty px-4">
           Built the brand new{" "}
           <a
             href="https://www.tryprofound.com"
@@ -26,24 +26,24 @@ export default function Home() {
           <img
             src="/profound-2.webp"
             alt=""
-            className="w-200 h-auto object-cover"
+            className="w-80 md:w-200 ml-4 md:ml-0 h-auto object-cover"
           />
           <img
             src="/profound-3.png"
             alt=""
-            className="w-200 h-auto object-cover"
+            className="w-80 md:w-200 h-auto object-cover"
           />
           <img
             src="/profound-4.png"
             alt=""
-            className="w-200 h-auto object-cover"
+            className="w-80 md:w-200 h-auto object-cover"
           />
         </EmblaCarousel>
       </section>
 
       {/* Buena website */}
-      <section className="grid grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary text-pretty">
+      <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
+        <p className="text-secondary text-pretty px-4">
           Built and designed the new{" "}
           <a
             href="https://buena.com"
@@ -55,18 +55,18 @@ export default function Home() {
           </a>{" "}
           website celebrating their $58M Series A.
         </p>
-        <div>
+        <div className="px-4">
           <VideoPlayer
             url="buena"
             aspectRatio="16/9"
-            className="w-200 h-auto "
+            className="w-full md:w-200 h-auto "
           />
         </div>
       </section>
 
       {/* WeWeb Editor */}
       <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary text-pretty">
+        <p className="text-secondary text-pretty px-4">
           WeWeb is a platform for building complex web applications with
           database conntections, comprehensive styling and workflow automation
         </p>
@@ -74,34 +74,38 @@ export default function Home() {
           <img
             src="/weweb/editor-new.png"
             alt="Create states, components or edit your elements visually"
-            className="h-auto w-80 md:w-200 object-cover pointer-events-none select-none"
+            className="h-auto ml-4 md:ml-0 w-80 md:w-200 pointer-events-none select-none"
           />
           <VideoPlayer
             url="ww-ai"
             aspectRatio="16/10"
-            className="h-auto w-200 shrink-0 pointer-events-none"
+            className="h-auto w-80 md:w-200 shrink-0 pointer-events-none"
           />
           <img
             src="/weweb/workflows.png"
             alt="Manage your app logic and data from a single place"
-            className="h-auto w-200 object-cover pointer-events-none select-none"
+            className="h-auto w-80 md:w-200 object-cover pointer-events-none select-none"
           />
           <img
             src="/weweb/edition-panel.png"
             alt="Build your logic and automation with the workflow editor"
-            className="h-auto w-200 object-cover pointer-events-none select-none"
+            className="h-auto w-80 md:w-200 object-cover pointer-events-none select-none"
           />
         </EmblaCarousel>
       </section>
 
       {/* Gymmy */}
-      <section className="grid grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary text-pretty">
+      <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
+        <p className="text-secondary text-pretty px-4">
           WeWeb is a platform for building complex web applications with
           database conntections, comprehensive styling and workflow automation
         </p>
-        <div>
-          <VideoPlayer url="gymmy" aspectRatio="1/1" className="h-120 w-auto" />
+        <div className="px-4">
+          <VideoPlayer
+            url="gymmy"
+            aspectRatio="1/1"
+            className="w-full md:w-120 w-auto"
+          />
         </div>
       </section>
 

@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en" data-theme="hazelnut" className="[scrollbar-gutter:stable]">
       <body>
         <ShaderBackgroundWrapper />
-        <header className="flex flex-col-reverse md:flex-row justify-between items-start pt-4 text-body container pb-40 gap-y-3">
+        <header className="flex flex-col-reverse md:flex-row justify-between items-start pt-4 text-body container px-4 md:px-0 pb-40 gap-y-3">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-9" />
