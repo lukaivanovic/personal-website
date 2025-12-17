@@ -21,8 +21,6 @@
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 .text-title {
@@ -161,7 +159,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overscroll-behavior: none;
   position: relative;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 @utility underline-link {
