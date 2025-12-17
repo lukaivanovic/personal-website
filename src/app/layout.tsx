@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="hazelnut" className="[scrollbar-gutter:stable]">
+    <html lang="en" data-theme="vanilla" className="[scrollbar-gutter:stable]">
       <body>
         <ShaderBackgroundWrapper />
         <header className="flex flex-col-reverse md:flex-row justify-between items-start pt-4 text-body container px-4 pb-40 gap-y-3">
