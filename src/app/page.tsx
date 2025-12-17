@@ -9,7 +9,7 @@ export default function Home() {
     <main className="min-h-screen pb-[240px] container flex flex-col gap-12 md:gap-x-4 md:gap-y-20">
       {/* Profound Shopping */}
       <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary max-w-88 text-pretty px-4">
+        <p className="text-secondary max-w-88 text-pretty">
           Built the brand new{" "}
           <a
             href="https://www.tryprofound.com"
@@ -26,7 +26,7 @@ export default function Home() {
           <img
             src="/profound-2.webp"
             alt=""
-            className="w-80 md:w-200 ml-4 md:ml-0 h-auto object-cover"
+            className="w-80 md:w-200  h-auto object-cover"
           />
           <img
             src="/profound-3.png"
@@ -42,20 +42,22 @@ export default function Home() {
       </section>
 
       {/* Buena website */}
-      <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary text-pretty px-4">
-          Built and designed the new{" "}
-          <a
-            href="https://buena.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground hover:text-secondary underline underline-offset-2"
-          >
-            buena.com
-          </a>{" "}
-          website celebrating their $58M Series A.
-        </p>
-        <div className="px-4">
+      <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2 border-b border-secondary/24 pb-4">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-base font-medium text-pretty">
+            Built and designed the new{" "}
+            <a
+              href="https://buena.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-secondary underline underline-offset-2"
+            >
+              buena.com
+            </a>{" "}
+            website celebrating their $58M Series A.
+          </h2>
+        </div>
+        <div>
           <VideoPlayer
             url="buena"
             aspectRatio="16/9"

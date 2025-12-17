@@ -47,42 +47,11 @@ export default function RootLayout({
     <html lang="en" data-theme="vanilla" className="[scrollbar-gutter:stable]">
       <body>
         <ShaderBackgroundWrapper />
-        <header className="flex flex-col-reverse md:flex-row justify-between items-start pt-4 text-body container px-4 pb-40 gap-y-3">
+        <header className="flex flex-row items-center justify-between pt-4 text-body container px-4 pb-16 gap-y-3">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-9" />
             </Link>
-            <div className="flex flex-col md:flex-row gap-2">
-              <h1 className="text-base font-medium text-justify text-pretty">
-                Dr. Ing. h.c. F. Porsche AG, commonly known as Porsche,
-                {/* <br /> */}
-                is a German automobile manufacturer specializing in luxury,
-                high-performance sports cars, SUVs and sedans, headquartered in
-                Stuttgart, Baden-Württemberg, Germany. The company is owned by
-                Volkswagen AG, a controlling stake of which is owned by Porsche
-                Automobil Holding SE, usually shortened to Porsche SE. Porsche's
-                current lineup includes the 911, Panamera, Macan, Cayenne and
-                Taycan.
-              </h1>
-              <p className="text-secondary max-w-140 text-pretty">
-                I love working by using paper or Figma canvas to explore ideas,
-                but moving to code to test my ideas. Posts like these ones from{" "}
-                <a
-                  href="https://x.com/karrisaarinen/status/1715085201653805116"
-                  className="underline cursor-default hover:text-foreground"
-                >
-                  Karri Saarinen
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://x.com/ryolu_/status/1990057444253241545"
-                  className="underline cursor-default hover:text-foreground"
-                >
-                  Ryo Lu
-                </a>{" "}
-                reflect very well on how I view current design work.
-              </p>
-            </div>
           </div>
           <div className="flex flex-row items-center justify-end gap-3 h-9 w-full md:w-auto">
             <ThemeSelect />
@@ -102,6 +71,38 @@ export default function RootLayout({
             {/* <BookACall /> */}
           </div>
         </header>
+        <section className="container flex flex-col md:flex-row gap-2 pb-16">
+          <div className="border-b border-secondary/24 pb-16 flex flex-col md:flex-row gap-4">
+            <h1 className="text-[17px] text-justify max-w-140 pr-2 font-medium text-pretty">
+              Dr. Ing. h.c. F. Porsche AG, commonly known as Porsche, is a
+              German automobile manufacturer specializing in luxury,
+              high-performance sports cars, SUVs and sedans, headquartered in
+              Stuttgart, Baden-Württemberg, Germany. The company is owned by
+              Volkswagen AG, a controlling stake of which is owned by Porsche
+              Automobil Holding SE, usually shortened to Porsche SE. Porsche's
+              current lineup includes the 911, Panamera, Macan, Cayenne and
+              Taycan.
+            </h1>
+            <p className="text-secondary max-w-4/5 md:max-w-60 text-pretty pt-1.5">
+              I love working by using paper or Figma canvas to explore ideas,
+              but moving to code to test my ideas. Posts like these ones from{" "}
+              <a
+                href="https://x.com/karrisaarinen/status/1715085201653805116"
+                className="underline cursor-default hover:text-foreground"
+              >
+                Karri Saarinen
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://x.com/ryolu_/status/1990057444253241545"
+                className="underline cursor-default hover:text-foreground"
+              >
+                Ryo Lu
+              </a>{" "}
+              reflect very well on how I view current design work.
+            </p>
+          </div>
+        </section>
         {children}
         <Analytics />
         <SpeedInsights />
