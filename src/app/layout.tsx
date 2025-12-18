@@ -45,9 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="vanilla" className="[scrollbar-gutter:stable]">
-      <body>
+      <body className="overflow-x-hidden">
         <ShaderBackgroundWrapper />
-        <header className="flex flex-row items-center justify-between pt-4 text-body container px-4 pb-16 gap-y-3">
+        <header className="flex flex-row items-center justify-between pt-4 text-body container px-4 pb-2 gap-y-3">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-row items-center gap-2">
               <Apollon className="size-10" />
@@ -70,35 +70,34 @@ export default function RootLayout({
             {/* <BookACall /> */}
           </div>
         </header>
-        <section className="container flex flex-col md:flex-row gap-2 pb-16">
-          <div className="border-b border-secondary/24 pb-16 flex flex-col  gap-4 w-full">
-            <h1 className="text-[19px] max-w-160 pr-2 font-medium text-pretty">
-              Dr. Ing. h.c. F. Porsche AG, commonly known as Porsche, is a
-              German automobile manufacturer specializing in luxury,
-              high-performance sports cars, SUVs and sedans, headquartered in
-              Stuttgart, Baden-Württemberg, Germany. The company is owned by
-              Volkswagen AG, a controlling stake of which is owned by Porsche
-              Automobil Holding SE, usually shortened to Porsche SE. Porsche's
-              current lineup includes the 911, Panamera, Macan, Cayenne and
-              Taycan.
+        <section className="container gap-2">
+          <div className="border-b border-secondary/24 pt-16 pb-32 flex md:flex-row flex-col md:justify-between gap-4">
+            <h1 className="text-[16px] md:text-[20px] max-w-178 pr-2 font-medium text-pretty">
+              Luka Ivanovic is an independent multidisciplinary design engineer
+              partnering with companies on end-to-end projects. He follows the
+              principle of form follows function focusing on the bigger picture
+              and product vision before diving into the design details like
+              beautiful visuals and interactions. Contributed to production for
+              companies like Profound, Buena and Daytona.
             </h1>
-            <p className="text-secondary max-w-140  text-pretty">
-              I love working by using paper or Figma canvas to explore ideas,
-              but moving to code to test my ideas. Posts like these ones from{" "}
+            <p className="text-[11px] text-secondary max-w-60 text-justify text-pretty pt-2">
+              In my free time, I love to playing with new tools like Cavalry or
+              Rive and creating product prototypes like this one for AI image
+              editing. Posts like{" "}
               <a
                 href="https://x.com/karrisaarinen/status/1715085201653805116"
                 className="underline cursor-default hover:text-foreground"
               >
-                Karri Saarinen
+                this
               </a>{" "}
-              and{" "}
+              one or{" "}
               <a
                 href="https://x.com/ryolu_/status/1990057444253241545"
                 className="underline cursor-default hover:text-foreground"
               >
-                Ryo Lu
+                this
               </a>{" "}
-              reflect very well on how I view current design work.
+              one reflect very well on how I view current design work.
             </p>
           </div>
         </section>

@@ -45,8 +45,8 @@ export function EmblaCarousel({
   const items = React.Children.toArray(children);
 
   return (
-    <div className={cn("overflow-hidden", className)}>
-      <div ref={viewportRef} className="overflow-hidden">
+    <div className={cn("", className)}>
+      <div ref={viewportRef}>
         <div className="flex gap-4">
           {items.map((child, index) => (
             <div

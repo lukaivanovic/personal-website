@@ -8,41 +8,38 @@ export default function Home() {
   return (
     <main className="min-h-screen pb-[240px] container flex flex-col gap-12 md:gap-x-4 md:gap-y-20">
       {/* Profound Shopping */}
-      <section className="flex flex-col gap-6 border-b border-secondary/24 py-18">
-        <p className="text-[19px] font-medium max-w-160 text-pretty">
-          Built the brand new{" "}
-          <a
-            href="https://www.tryprofound.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground hover:text-secondary underline underline-offset-2"
-          >
-            Profound
-          </a>{" "}
-          Shopping analytics package which provides an extremely detailed view
-          into ChatGPT's shopping results.
-        </p>
+      <section className="flex flex-col gap-6 border-b border-secondary/24 py-20">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-base md:text-[19px] font-medium max-w-160 text-pretty">
+            Profound Shopping
+          </h2>
+          <p className="text-secondary text-pretty max-w-100">
+            Built the brand new Profound Shopping analytics package which
+            provides an extremely detailed view into ChatGPT's shopping results.
+          </p>
+        </div>
+
         <EmblaCarousel className="relative w-full" slideClassName="w-auto">
           <img
             src="/profound-2.webp"
             alt=""
-            className="w-80 md:w-200 border border-foreground/24 h-auto object-cover"
+            className="w-140 md:w-200 border border-foreground/24 h-auto object-cover"
           />
           <img
             src="/profound-3.png"
             alt=""
-            className="w-80 md:w-200 h-auto object-cover"
+            className="w-140 md:w-200 h-auto object-cover"
           />
           <img
             src="/profound-4.png"
             alt=""
-            className="w-80 md:w-200 h-auto object-cover"
+            className="w-140 md:w-200 h-auto object-cover"
           />
         </EmblaCarousel>
       </section>
 
       {/* Buena website */}
-      <section className="flex flex-col gap-2 border-b border-secondary/24 pb-4">
+      <section className="flex flex-col gap-2 border-b border-secondary/24 py-10">
         <div className="flex flex-col gap-2">
           <h2 className="text-base font-medium text-pretty">
             Built and designed the new{" "}
@@ -61,54 +58,60 @@ export default function Home() {
           <VideoPlayer
             url="buena"
             aspectRatio="16/9"
-            className="w-full md:w-200 h-auto "
+            className="w-full h-auto "
           />
         </div>
       </section>
 
       {/* WeWeb Editor */}
-      <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary text-pretty px-4">
-          WeWeb is a platform for building complex web applications with
-          database conntections, comprehensive styling and workflow automation
-        </p>
+      <section className="flex flex-col gap-6 border-b border-secondary/24 py-10">
+        <div className="flex flex-col gap-2">
+          {" "}
+          <h2 className="text-base md:text-[19px] font-medium max-w-160 text-pretty">
+            WeWeb Editor
+          </h2>
+          <p className="text-secondary text-pretty">
+            WeWeb is a platform for building complex web applications with
+            database conntections, comprehensive styling and workflow automation
+          </p>
+        </div>
+
         <EmblaCarousel className="flex-1" slideClassName="">
           <img
             src="/weweb/editor-new.png"
             alt="Create states, components or edit your elements visually"
-            className="h-auto ml-4 md:ml-0 w-80 md:w-200 pointer-events-none select-none"
+            className="h-auto ml-4 md:ml-0 w-120 md:w-200 pointer-events-none select-none"
           />
           <VideoPlayer
             url="ww-ai"
             aspectRatio="16/10"
-            className="h-auto w-80 md:w-200 shrink-0 pointer-events-none"
+            className="h-auto w-120 md:w-200 shrink-0 pointer-events-none"
           />
           <img
             src="/weweb/workflows.png"
             alt="Manage your app logic and data from a single place"
-            className="h-auto w-80 md:w-200 object-cover pointer-events-none select-none"
+            className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
           />
           <img
             src="/weweb/edition-panel.png"
             alt="Build your logic and automation with the workflow editor"
-            className="h-auto w-80 md:w-200 object-cover pointer-events-none select-none"
+            className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
           />
         </EmblaCarousel>
       </section>
 
       {/* Gymmy */}
-      <section className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-2">
-        <p className="text-secondary text-pretty px-4">
-          WeWeb is a platform for building complex web applications with
-          database conntections, comprehensive styling and workflow automation
-        </p>
-        <div className="px-4">
-          <VideoPlayer
-            url="gymmy"
-            aspectRatio="1/1"
-            className="w-full md:w-120 w-auto"
-          />
+      <section className="flex flex-col gap-6 border-b border-secondary/24 py-10">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-base md:text-[19px] font-medium max-w-160 text-pretty">
+            Gymmy
+          </h2>
+          <p className="text-secondary text-pretty">
+            Gymmy is a platform for building complex web applications with
+            database conntections, comprehensive styling and workflow automation
+          </p>
         </div>
+        <VideoPlayer url="gymmy" aspectRatio="1/1" className="w-full" />
       </section>
 
       {/* Playground */}
