@@ -72,13 +72,11 @@ export default function RootLayout({
         </header>
         <section className="container gap-2">
           <div className="pt-24 pb-48 flex flex-col gap-2">
-            <h1 className="text-[15px] md:text-[21px] pr-2 font-medium text-pretty">
+            <h1 className="text-[15px] md:text-[21px] md:pr-28 font-medium text-pretty">
               Independent multidisciplinary design engineer partnering with
-              <br /> companies on end-to-end projects. I like to focus on the{" "}
-              bigger <br /> picture and product vision before diving into the
-              design details <br />
-              like beautiful visuals and interactions. Contributed to production{" "}
-              <br />
+              companies on end-to-end projects. I like to focus on the bigger
+              picture and product vision before diving into the design details
+              like beautiful visuals and interactions. Contributed to production
               for companies like Profound, Buena and Daytona.
             </h1>
           </div>

@@ -66,11 +66,11 @@ export default function Home() {
           </p>
         </div>
 
-        <EmblaCarousel className="flex-1" slideClassName="">
+        <EmblaCarousel className="flex-1">
           <img
             src="/weweb/editor-new.png"
             alt="Create states, components or edit your elements visually"
-            className="h-auto ml-4 md:ml-0 w-120 md:w-200 pointer-events-none select-none"
+            className="h-auto w-120 md:w-200 pointer-events-none select-none"
           />
           <VideoPlayer
             url="ww-ai"
@@ -98,7 +98,7 @@ export default function Home() {
             This is where you will find some of my experiments and prototypes.
           </p>
         </div>
-        <div className="gap-2 grid grid-cols-3">
+        <div className="gap-2 grid grid-cols-1  md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <VideoWithCaption
               url="buena-sidebar-icons"
