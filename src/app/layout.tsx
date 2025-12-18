@@ -50,18 +50,17 @@ export default function RootLayout({
         <header className="flex flex-row items-center justify-between pt-4 text-body container px-4 pb-16 gap-y-3">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex flex-row items-center gap-2">
-              <Apollon className="size-9" />
+              <Apollon className="size-10" />
             </Link>
           </div>
-          <div className="flex flex-row items-center justify-end gap-3 h-9 w-full md:w-auto">
-            <ThemeSelect />
-
+          <div className="flex flex-row items-center justify-end gap-8 h-9 w-full md:w-auto">
             <a
               href="https://x.com/lukaivnvc"
-              className="hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+              className="px-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
             >
-              X
+              Twitter
             </a>
+            <ThemeSelect />
             <a
               href="mailto:hi@ivanovicluka.co"
               className="px-1 bg-foreground text-background hover:bg-background hover:text-foreground active:bg-foreground active:text-background cursor-pointer md:cursor-default "
@@ -72,8 +71,8 @@ export default function RootLayout({
           </div>
         </header>
         <section className="container flex flex-col md:flex-row gap-2 pb-16">
-          <div className="border-b border-secondary/24 pb-16 flex flex-col md:flex-row gap-4">
-            <h1 className="text-[17px] text-justify max-w-140 pr-2 font-medium text-pretty">
+          <div className="border-b border-secondary/24 pb-16 flex flex-col  gap-4 w-full">
+            <h1 className="text-[19px] max-w-160 pr-2 font-medium text-pretty">
               Dr. Ing. h.c. F. Porsche AG, commonly known as Porsche, is a
               German automobile manufacturer specializing in luxury,
               high-performance sports cars, SUVs and sedans, headquartered in
@@ -83,7 +82,7 @@ export default function RootLayout({
               current lineup includes the 911, Panamera, Macan, Cayenne and
               Taycan.
             </h1>
-            <p className="text-secondary max-w-4/5 md:max-w-60 text-pretty pt-1.5">
+            <p className="text-secondary max-w-140  text-pretty">
               I love working by using paper or Figma canvas to explore ideas,
               but moving to code to test my ideas. Posts like these ones from{" "}
               <a

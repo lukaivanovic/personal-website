@@ -50,7 +50,7 @@ export default function ThemeSelect() {
 
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
-      <Select.Trigger className="cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background">
+      <Select.Trigger className="px-1 cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background">
         {themes.find((theme) => theme.value === value)?.label || "Vanilla"}
         <Caret className="rotate-90" />
       </Select.Trigger>
