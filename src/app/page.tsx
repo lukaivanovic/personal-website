@@ -6,11 +6,11 @@ import EmblaCarousel from "@/components/EmblaCarousel";
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-[240px] container flex flex-col gap-12 md:gap-x-4 md:gap-y-20">
+    <main className="min-h-screen pb-[240px] container flex flex-col md:gap-x-4 md:gap-y-20">
       {/* Profound Shopping */}
-      <section className="flex flex-col gap-6 border-b border-secondary/24 py-20">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-base md:text-[19px] font-medium max-w-160 text-pretty">
+      <section className="flex flex-col gap-6">
+        <div className="flex flex-col gap-0.5">
+          <h2 className="text-base  font-medium max-w-160 text-pretty">
             Profound Shopping
           </h2>
           <p className="text-secondary text-pretty max-w-100">
@@ -28,31 +28,24 @@ export default function Home() {
           <img
             src="/profound-3.png"
             alt=""
-            className="w-140 md:w-200 h-auto object-cover"
+            className="w-140 md:w-200 h-auto border border-foreground/24 object-cover"
           />
           <img
             src="/profound-4.png"
             alt=""
-            className="w-140 md:w-200 h-auto object-cover"
+            className="w-140 md:w-200 h-auto border border-foreground/24 object-cover"
           />
         </EmblaCarousel>
       </section>
 
       {/* Buena website */}
-      <section className="flex flex-col gap-2 border-b border-secondary/24 py-10">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-base font-medium text-pretty">
-            Built and designed the new{" "}
-            <a
-              href="https://buena.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-secondary underline underline-offset-2"
-            >
-              buena.com
-            </a>{" "}
-            website celebrating their $58M Series A.
-          </h2>
+      <section className="flex flex-col gap-6">
+        <div className="flex flex-col gap-0.5">
+          <h2 className="text-base font-medium text-pretty">Buena website</h2>
+          <p className="text-secondary text-pretty">
+            Built and designed the new buena.com website celebrating their $58M
+            Series A.
+          </p>
         </div>
         <div>
           <VideoPlayer
@@ -64,12 +57,9 @@ export default function Home() {
       </section>
 
       {/* WeWeb Editor */}
-      <section className="flex flex-col gap-6 border-b border-secondary/24 py-10">
-        <div className="flex flex-col gap-2">
-          {" "}
-          <h2 className="text-base md:text-[19px] font-medium max-w-160 text-pretty">
-            WeWeb Editor
-          </h2>
+      <section className="flex flex-col gap-6 py-10">
+        <div className="flex flex-col gap-0.5">
+          <h2 className="text-base font-medium text-pretty">WeWeb</h2>
           <p className="text-secondary text-pretty">
             WeWeb is a platform for building complex web applications with
             database conntections, comprehensive styling and workflow automation
@@ -100,52 +90,37 @@ export default function Home() {
         </EmblaCarousel>
       </section>
 
-      {/* Gymmy */}
-      <section className="flex flex-col gap-6 border-b border-secondary/24 py-10">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-base md:text-[19px] font-medium max-w-160 text-pretty">
-            Gymmy
-          </h2>
-          <p className="text-secondary text-pretty">
-            Gymmy is a platform for building complex web applications with
-            database conntections, comprehensive styling and workflow automation
-          </p>
-        </div>
-        <VideoPlayer url="gymmy" aspectRatio="1/1" className="w-full" />
-      </section>
-
       {/* Playground */}
       <section className="flex flex-col gap-6 md:col-span-2">
-        <div className="flex flex-col gap-1">
-          <h2>Playground</h2>
-          <p className="text-secondary">
+        <div className="flex flex-col gap-0.5">
+          <h2 className="text-base font-medium text-pretty">Playground</h2>
+          <p className="text-secondary text-pretty">
             This is where you will find some of my experiments and prototypes.
           </p>
         </div>
-        <div className=" gap-2 grid grid-cols-3">
-          <VideoWithCaption
-            url="buena-sidebar-icons"
-            aspectRatio="1/1"
-            caption="Buena sidebar icon animation"
-          />
+        <div className="gap-2 grid grid-cols-3">
           <div className="flex flex-col gap-2">
+            <VideoWithCaption
+              url="buena-sidebar-icons"
+              aspectRatio="1/1"
+              caption="Sidebar with animated icons built in Rive for Buena."
+            />
             <VideoWithCaption
               url="radial"
               aspectRatio="5/4"
-              caption="Radial progress visual experiment"
+              caption="Radial menu concept for a design tool built in React"
             />
-
             <VideoWithCaption
               url="tsushima"
               aspectRatio="1/1"
-              caption="Tsushima character avatar UI prototype"
+              caption="Particle dissolve effect inspired by the Ghost of Tsushima game and built with three.js with no external libraries."
             />
           </div>
           <div className="flex flex-col gap-2">
             <VideoWithCaption
               url="menu"
               aspectRatio="5/4"
-              caption="Animated radial menu prototype"
+              caption="A different take on the animation of an opening submenu where the menu items are revealed from the center instead of the top."
             />
             <VideoWithCaption
               url="rive"
@@ -160,9 +135,14 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-2">
             <VideoWithCaption
+              url="gymmy"
+              aspectRatio="1/1"
+              caption="iOS application for tracking your workouts using voice as an input. Built with SwiftUI and LiveKit."
+            />
+            <VideoWithCaption
               url="material-maker"
               aspectRatio="1/1"
-              caption="Material Maker node UI demo"
+              caption="Cool glowing effect built in Material Maker"
             />
           </div>
         </div>

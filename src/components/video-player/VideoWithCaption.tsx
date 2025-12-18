@@ -18,8 +18,8 @@ export default function VideoWithCaption({
   return (
     <div className={`group relative overflow-hidden ${className || ""}`}>
       <VideoPlayer url={url} aspectRatio={aspectRatio} autoPlay={autoPlay} />
-      <div className="absolute bottom-0 left-0 right-0 bg-foreground/95 backdrop-blur-sm px-4 py-1 transition-transform duration-300 ease-out z-20 ">
-        <span className="text-background">{caption}</span>
+      <div className="py-1 text-secondary text-pretty transition-transform duration-300 ease-out z-20 ">
+        <span>{caption}</span>
       </div>
     </div>
   );

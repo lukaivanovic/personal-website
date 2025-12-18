@@ -18,7 +18,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 24px;
@@ -149,6 +149,9 @@ body {
   font-family: "TWK Lausanne", sans-serif;
   position: relative;
   font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @utility underline-link {

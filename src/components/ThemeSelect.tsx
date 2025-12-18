@@ -7,10 +7,8 @@ import Caret from "@/assets/Caret";
 const themes = [
   { label: "Vanilla", value: "vanilla" },
   { label: "8-ball", value: "8-ball" },
-  { label: "Strawberry", value: "strawberry" },
   { label: "Cool Blue", value: "cool-blue" },
   { label: "Hazelnut", value: "hazelnut" },
-  { label: "Jujutsu", value: "jujutsu" },
   { label: "Enigma", value: "shader" },
 ];
 
@@ -29,8 +27,8 @@ function setTheme(theme: string) {
 }
 
 function getCurrentTheme(): string {
-  if (typeof document === "undefined") return "hazelnut";
-  return document.documentElement.getAttribute("data-theme") || "hazelnut";
+  if (typeof document === "undefined") return "8-ball";
+  return document.documentElement.getAttribute("data-theme") || "8-ball";
 }
 
 export default function ThemeSelect() {
@@ -51,7 +49,7 @@ export default function ThemeSelect() {
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
       <Select.Trigger className="px-1 cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background">
-        {themes.find((theme) => theme.value === value)?.label || "Vanilla"}
+        {themes.find((theme) => theme.value === value)?.label || "8-ball"}
         <Caret className="rotate-90" />
       </Select.Trigger>
       <Select.Portal>

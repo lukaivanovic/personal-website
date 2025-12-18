@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="vanilla" className="[scrollbar-gutter:stable]">
+    <html lang="en" data-theme="8-ball" className="[scrollbar-gutter:stable]">
       <body className="overflow-x-hidden">
         <ShaderBackgroundWrapper />
         <header className="flex flex-row items-center justify-between pt-4 text-body container px-4 pb-2 gap-y-3">
@@ -71,34 +71,16 @@ export default function RootLayout({
           </div>
         </header>
         <section className="container gap-2">
-          <div className="border-b border-secondary/24 pt-16 pb-32 flex md:flex-row flex-col md:justify-between gap-4">
-            <h1 className="text-[16px] md:text-[20px] max-w-178 pr-2 font-medium text-pretty">
-              Luka Ivanovic is an independent multidisciplinary design engineer
-              partnering with companies on end-to-end projects. He follows the
-              principle of form follows function focusing on the bigger picture
-              and product vision before diving into the design details like
-              beautiful visuals and interactions. Contributed to production for
-              companies like Profound, Buena and Daytona.
+          <div className="pt-24 pb-48 flex flex-col gap-2">
+            <h1 className="text-[15px] md:text-[21px] pr-2 font-medium text-pretty">
+              Independent multidisciplinary design engineer partnering with
+              <br /> companies on end-to-end projects. I like to focus on the{" "}
+              bigger <br /> picture and product vision before diving into the
+              design details <br />
+              like beautiful visuals and interactions. Contributed to production{" "}
+              <br />
+              for companies like Profound, Buena and Daytona.
             </h1>
-            <p className="text-[11px] text-secondary max-w-60 text-justify text-pretty pt-2">
-              In my free time, I love to playing with new tools like Cavalry or
-              Rive and creating product prototypes like this one for AI image
-              editing. Posts like{" "}
-              <a
-                href="https://x.com/karrisaarinen/status/1715085201653805116"
-                className="underline cursor-default hover:text-foreground"
-              >
-                this
-              </a>{" "}
-              one or{" "}
-              <a
-                href="https://x.com/ryolu_/status/1990057444253241545"
-                className="underline cursor-default hover:text-foreground"
-              >
-                this
-              </a>{" "}
-              one reflect very well on how I view current design work.
-            </p>
           </div>
         </section>
         {children}
