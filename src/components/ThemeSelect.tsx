@@ -48,9 +48,9 @@ export default function ThemeSelect() {
 
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
-      <Select.Trigger className="px-1 cursor-pointer md:cursor-default flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background">
+      <Select.Trigger className="group px-1 cursor-pointer md:cursor-default text-secondary flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background ">
         {themes.find((theme) => theme.value === value)?.label || "8-ball"}
-        <Caret className="rotate-90" />
+        <Caret className="rotate-90 transition-transform duration-200 group-data-popup-open:rotate-0" />
       </Select.Trigger>
       <Select.Portal>
         <Select.Positioner

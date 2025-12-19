@@ -54,8 +54,8 @@ export default function RootLayout({
         <ShaderBackgroundWrapper />
         <main className="grid grid-cols-1 md:grid-cols-[400px_1fr]">
           <header className="text-body">
-            <div className="flex flex-col md:sticky md:top-0 md:min-h-screen p-6">
-              <Pattern />
+            <div className="flex flex-col md:sticky md:top-0 md:min-h-screen py-4 px-6">
+              {/* <Pattern /> */}
 
               {/* Header */}
               <div className="flex flex-row items-center justify-between gap-2 pt-4">
@@ -70,46 +70,40 @@ export default function RootLayout({
 
               {/* Content */}
 
-              <div className="flex flex-col gap-4 py-10">
-                <h1 className="text-[15px] md:text-[40px] leading-11 font-semibold text-pretty">
-                  Independent design engineer partnering with companies on end
-                  to end projects.
+              <div className="flex flex-col pt-16">
+                <h1 className="text-[26px] leading-[34px] font-semibold text-pretty">
+                  Independent design engineer helping companies achieve design
+                  excellence.
                 </h1>
 
-                <div className="flex flex-row items-center gap-1 h-9 w-full md:w-auto">
+                <p className="text-secondary mt-2 font-medium text-pretty">
+                  Currently based in Zagreb, Croatia.
+                </p>
+
+                <div className="flex flex-row items-center gap-2 h-9 w-full md:w-auto mt-16">
                   <a
                     href="mailto:hi@ivanovicluka.co"
-                    className="px-2 py-1 bg-foreground text-background hover:bg-background hover:text-foreground active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+                    className="px-4 py-2 bg-foreground text-background border border-transparent hover:border-foreground hover:bg-background hover:text-foreground cursor-pointer md:cursor-default "
                   >
                     Contact me
                   </a>
                   <a
                     href="https://x.com/lukaivnvc"
-                    className="px-2 py-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background cursor-pointer md:cursor-default "
+                    className="px-2 py-2 text-secondary hover:text-foreground  cursor-pointer md:cursor-default "
                   >
                     See more on X
                   </a>
                 </div>
               </div>
 
-              <div className="grow"></div>
+              <div className="flex flex-row items-center gap-3 text-foreground/50 mt-6 md:mt-auto pb-6">
+                <ProfoundLogo className="h-5 w-auto " />
+                <BuenaLogo className="h-5 w-auto " />
+                <DaytonaLogo className="h-5 w-auto " />
+                <TurboLogo className="h-5 w-auto " />
+              </div>
 
               <Pattern />
-
-              <div className="grid grid-cols-2 text-foreground/50">
-                <div className="flex flex-row items-center py-4 justify-center ">
-                  <ProfoundLogo className="h-6 w-auto " />
-                </div>
-                <div className="flex flex-row items-center py-4 justify-center ">
-                  <BuenaLogo className="h-6 w-auto " />
-                </div>
-                <div className="flex flex-row items-center py-4 justify-center ">
-                  <DaytonaLogo className="h-6 w-auto " />
-                </div>
-                <div className="flex flex-row items-center py-4 justify-center ">
-                  <TurboLogo className="h-6 w-auto " />
-                </div>
-              </div>
             </div>
           </header>
 

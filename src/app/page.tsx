@@ -3,6 +3,7 @@ import VideoPlayer from "@/components/video-player/VideoPlayer";
 import VideoWithCaption from "@/components/video-player/VideoWithCaption";
 import ProfoundLogo from "@/assets/ProfoundLogo";
 import EmblaCarousel from "@/components/EmblaCarousel";
+import Pattern from "@/assets/Pattern";
 
 export default function Home() {
   return (
@@ -22,11 +23,9 @@ export default function Home() {
           />
         </div>
 
-        <div className="flex flex-col gap-0.5">
-          <h2 className="text-base  font-medium max-w-160 text-pretty">
-            Profound Shopping
-          </h2>
-          <p className="text-secondary text-pretty max-w-100">
+        <div className="flex flex-col md:flex-row md:gap-4 gap-1">
+          <h2 className="font-medium">Profound Shopping</h2>
+          <p className="text-secondary">
             Built the brand new Profound Shopping analytics package which
             provides an extremely detailed view into ChatGPT's shopping results.
           </p>
@@ -35,16 +34,16 @@ export default function Home() {
 
       {/* Buena website */}
       <section className="flex flex-col gap-2">
-        <div className="aspect-5/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 rounded-xl flex items-center justify-center">
+        <div className="aspect-5/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 flex items-center justify-center">
           <VideoPlayer
             url="buena"
             aspectRatio="16/9"
             className="w-3/4 h-auto "
           />
         </div>
-        <div className="flex flex-col gap-0.5">
-          <h2 className="text-base font-medium text-pretty">Buena website</h2>
-          <p className="text-secondary text-pretty">
+        <div className="flex flex-col md:flex-row md:gap-4 gap-1">
+          <h2 className="font-medium">Buena website</h2>
+          <p className="text-secondary">
             Built and designed the new buena.com website celebrating their $58M
             Series A.
           </p>
@@ -53,39 +52,41 @@ export default function Home() {
 
       {/* WeWeb Editor */}
       <section className="flex flex-col gap-2">
-        <div className="aspect-4/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 rounded-xl flex items-center justify-center overflow-hidden">
+        <div className="aspect-4/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 flex items-center justify-center overflow-hidden">
           <EmblaCarousel className="flex-1">
             <img
               src="/weweb/editor-new.png"
               alt="Create states, components or edit your elements visually"
-              className="h-auto w-120 md:w-200 pointer-events-none select-none"
+              className="h-auto w-60 md:w-200 pointer-events-none select-none"
             />
             <VideoPlayer
               url="ww-ai"
               aspectRatio="16/10"
-              className="h-auto w-120 md:w-200 shrink-0 pointer-events-none"
+              className="h-auto w-60 md:w-200 shrink-0 pointer-events-none"
             />
             <img
               src="/weweb/workflows.png"
               alt="Manage your app logic and data from a single place"
-              className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
+              className="h-auto w-60 md:w-200 object-cover pointer-events-none select-none"
             />
             <img
               src="/weweb/edition-panel.png"
               alt="Build your logic and automation with the workflow editor"
-              className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
+              className="h-auto w-60 md:w-200 object-cover pointer-events-none select-none"
             />
           </EmblaCarousel>
         </div>
 
-        <div className="flex flex-col gap-0.5">
-          <h2 className="text-base font-medium text-pretty">WeWeb</h2>
-          <p className="text-secondary text-pretty">
+        <div className="flex flex-col md:flex-row md:gap-4 gap-1">
+          <h2 className="font-medium">WeWeb</h2>
+          <p className="text-secondary">
             WeWeb is a platform for building complex web applications with
             database conntections, comprehensive styling and workflow automation
           </p>
         </div>
       </section>
+
+      <Pattern viewBoxWidth={1000} />
 
       {/* Playground */}
       <section className="flex flex-col gap-6 md:col-span-2">
