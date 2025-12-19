@@ -6,9 +6,22 @@ import EmblaCarousel from "@/components/EmblaCarousel";
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-[240px] container flex flex-col md:gap-x-4 md:gap-y-20">
+    <div className="min-h-screen flex flex-col gap-10 p-4">
       {/* Profound Shopping */}
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col gap-2">
+        <div className="aspect-5/3 relative  px-6 rounded-xl flex items-center justify-center">
+          <img
+            src="/profound-2.webp"
+            alt=""
+            className="z-10 border border-foreground/24 h-auto object-cover scale-90"
+          />
+          <img
+            src="/profound-bg.png"
+            alt="Profound Shopping background"
+            className="w-full h-full absolute inset-0 object-cover"
+          />
+        </div>
+
         <div className="flex flex-col gap-0.5">
           <h2 className="text-base  font-medium max-w-160 text-pretty">
             Profound Shopping
@@ -18,28 +31,17 @@ export default function Home() {
             provides an extremely detailed view into ChatGPT's shopping results.
           </p>
         </div>
-
-        <EmblaCarousel className="relative w-full" slideClassName="w-auto">
-          <img
-            src="/profound-2.webp"
-            alt=""
-            className="w-140 md:w-200 border border-foreground/24 h-auto object-cover"
-          />
-          <img
-            src="/profound-3.png"
-            alt=""
-            className="w-140 md:w-200 h-auto border border-foreground/24 object-cover"
-          />
-          <img
-            src="/profound-4.png"
-            alt=""
-            className="w-140 md:w-200 h-auto border border-foreground/24 object-cover"
-          />
-        </EmblaCarousel>
       </section>
 
       {/* Buena website */}
-      <section className="flex flex-col gap-6">
+      <section className="flex flex-col gap-2">
+        <div className="aspect-5/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 rounded-xl flex items-center justify-center">
+          <VideoPlayer
+            url="buena"
+            aspectRatio="16/9"
+            className="w-3/4 h-auto "
+          />
+        </div>
         <div className="flex flex-col gap-0.5">
           <h2 className="text-base font-medium text-pretty">Buena website</h2>
           <p className="text-secondary text-pretty">
@@ -47,17 +49,35 @@ export default function Home() {
             Series A.
           </p>
         </div>
-        <div>
-          <VideoPlayer
-            url="buena"
-            aspectRatio="16/9"
-            className="w-full h-auto "
-          />
-        </div>
       </section>
 
       {/* WeWeb Editor */}
-      <section className="flex flex-col gap-6 py-10">
+      <section className="flex flex-col gap-2">
+        <div className="aspect-4/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 rounded-xl flex items-center justify-center overflow-hidden">
+          <EmblaCarousel className="flex-1">
+            <img
+              src="/weweb/editor-new.png"
+              alt="Create states, components or edit your elements visually"
+              className="h-auto w-120 md:w-200 pointer-events-none select-none"
+            />
+            <VideoPlayer
+              url="ww-ai"
+              aspectRatio="16/10"
+              className="h-auto w-120 md:w-200 shrink-0 pointer-events-none"
+            />
+            <img
+              src="/weweb/workflows.png"
+              alt="Manage your app logic and data from a single place"
+              className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
+            />
+            <img
+              src="/weweb/edition-panel.png"
+              alt="Build your logic and automation with the workflow editor"
+              className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
+            />
+          </EmblaCarousel>
+        </div>
+
         <div className="flex flex-col gap-0.5">
           <h2 className="text-base font-medium text-pretty">WeWeb</h2>
           <p className="text-secondary text-pretty">
@@ -65,29 +85,6 @@ export default function Home() {
             database conntections, comprehensive styling and workflow automation
           </p>
         </div>
-
-        <EmblaCarousel className="flex-1">
-          <img
-            src="/weweb/editor-new.png"
-            alt="Create states, components or edit your elements visually"
-            className="h-auto w-120 md:w-200 pointer-events-none select-none"
-          />
-          <VideoPlayer
-            url="ww-ai"
-            aspectRatio="16/10"
-            className="h-auto w-120 md:w-200 shrink-0 pointer-events-none"
-          />
-          <img
-            src="/weweb/workflows.png"
-            alt="Manage your app logic and data from a single place"
-            className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
-          />
-          <img
-            src="/weweb/edition-panel.png"
-            alt="Build your logic and automation with the workflow editor"
-            className="h-auto w-120 md:w-200 object-cover pointer-events-none select-none"
-          />
-        </EmblaCarousel>
       </section>
 
       {/* Playground */}
@@ -147,6 +144,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

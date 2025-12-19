@@ -123,6 +123,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-border: color-mix(in srgb, var(--foreground) 20%, var(--background));
   --color-secondary: var(--foreground-secondary);
 }
 
@@ -130,6 +131,15 @@
   font-family: "TWK Lausanne";
   src: url("/fonts/TWKLausanne-450.woff2") format("woff2");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TWK Lausanne";
+  src: url("/fonts/TWKLausanne-550.otf") format("opentype"),
+    url("/fonts/TWKLausanne-550.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -151,7 +161,7 @@ body {
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 }
 
 @utility underline-link {
@@ -209,4 +219,9 @@ video {
   to {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
 }
