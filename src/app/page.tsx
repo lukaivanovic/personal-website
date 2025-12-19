@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* WeWeb Editor */}
       <section className="flex flex-col gap-2">
-        <div className="aspect-4/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 flex items-center justify-center overflow-hidden">
+        <div className="aspect-5/3 bg-linear-to-b from-foreground/10 to-foreground/5 px-6 flex items-center justify-center overflow-hidden">
           <EmblaCarousel className="flex-1">
             <img
               src="/weweb/editor-new.png"
