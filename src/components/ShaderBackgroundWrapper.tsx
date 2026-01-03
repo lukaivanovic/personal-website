@@ -14,10 +14,7 @@ export default function ShaderBackgroundWrapper() {
     // Watch for theme changes
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (
-          mutation.type === "attributes" &&
-          mutation.attributeName === "data-theme"
-        ) {
+        if (mutation.type === "attributes" && mutation.attributeName === "data-theme") {
           const newTheme = htmlElement.getAttribute("data-theme") || "vanilla";
           setTheme(newTheme);
         }

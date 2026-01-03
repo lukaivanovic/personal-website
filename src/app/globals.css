@@ -28,41 +28,25 @@
 [data-theme="8-ball"] {
   --background: #000000;
   --foreground: #ffffff;
-  --foreground-secondary: color-mix(
-    in srgb,
-    var(--foreground) 72%,
-    transparent
-  );
+  --foreground-secondary: color-mix(in srgb, var(--foreground) 50%, transparent);
 }
 
 [data-theme="cool-blue"] {
   --background: #130923;
   --foreground: #b6e4ee;
-  --foreground-secondary: color-mix(
-    in srgb,
-    var(--foreground) 72%,
-    transparent
-  );
+  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
 }
 
 [data-theme="hazelnut"] {
   --background: #eae7e1;
   --foreground: #363021;
-  --foreground-secondary: color-mix(
-    in srgb,
-    var(--foreground) 72%,
-    transparent
-  );
+  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
 }
 
 [data-theme="strawberry"] {
   --background: #ffc8ea;
   --foreground: #ff2e00;
-  --foreground-secondary: color-mix(
-    in srgb,
-    var(--foreground) 72%,
-    transparent
-  );
+  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
 }
 
 [data-theme="vanilla"] {
@@ -92,16 +76,12 @@
   }
   --background: #0a0a0a;
   --foreground: #ffffff;
-  --foreground-secondary: color-mix(
-    in srgb,
-    var(--foreground) 72%,
-    transparent
-  );
+  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
 }
 
 .logo {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(4963%)
-    hue-rotate(11deg) brightness(89%) contrast(122%);
+  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(4963%) hue-rotate(11deg)
+    brightness(89%) contrast(122%);
 }
 
 @theme inline {
@@ -121,7 +101,8 @@
 
 @font-face {
   font-family: "TWK Lausanne";
-  src: url("/fonts/TWKLausanne-550.otf") format("opentype"),
+  src:
+    url("/fonts/TWKLausanne-550.otf") format("opentype"),
     url("/fonts/TWKLausanne-550.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -130,7 +111,8 @@
 
 @font-face {
   font-family: "TWK Lausanne";
-  src: url("/fonts/TWKLausanne-350.otf") format("opentype"),
+  src:
+    url("/fonts/TWKLausanne-350.otf") format("opentype"),
     url("/fonts/TWKLausanne-350.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -189,7 +171,7 @@ video {
 
 @keyframes reveal-dark {
   from {
-    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
   }
   to {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -198,11 +180,20 @@ video {
 
 @keyframes reveal-light {
   from {
-    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
   }
   to {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
+}
+
+@utility clipped {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.3s ease-out;
+}
+
+@utility reveal-bottom-to-top {
+  clip-path: inset(0 0 0 0);
 }
 
 ::selection {

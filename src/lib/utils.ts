@@ -38,10 +38,7 @@ export function buildEllipseArcLUT(a: number, b: number, steps = 1000) {
 }
 
 // Given progress t in [0,1], find angle that corresponds
-export function progressToAngle(
-  t: number,
-  lut: { angle: number; s: number }[]
-) {
+export function progressToAngle(t: number, lut: { angle: number; s: number }[]) {
   // binary search in LUT
   let lo = 0;
   let hi = lut.length - 1;

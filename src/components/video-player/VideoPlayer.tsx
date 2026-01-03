@@ -46,7 +46,7 @@ export default function VideoPlayer({
                     console.error("Error playing video:", error);
                   });
                 },
-                { once: true }
+                { once: true },
               );
             }
           }
@@ -55,7 +55,7 @@ export default function VideoPlayer({
       {
         threshold: 0.1,
         rootMargin: "50px",
-      }
+      },
     );
 
     observer.observe(container);
@@ -124,10 +124,7 @@ export default function VideoPlayer({
           poster={`https://cdn.ivanovicluka.co/${url}.mp4?t=0.1`}
           onLoadedData={handleVideoLoad}
         >
-          <source
-            src={`https://cdn.ivanovicluka.co/${url}.mp4`}
-            type={"video/mp4"}
-          />
+          <source src={`https://cdn.ivanovicluka.co/${url}.mp4`} type={"video/mp4"} />
           {/* <source
             src={`https://cdn.ivanovicluka.co/${url}.webm`}
             type={"video/webm"}

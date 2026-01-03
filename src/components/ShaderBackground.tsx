@@ -116,11 +116,7 @@ const fragmentShaderSource = `
   }
 `;
 
-function createShader(
-  gl: WebGLRenderingContext,
-  type: number,
-  source: string
-): WebGLShader | null {
+function createShader(gl: WebGLRenderingContext, type: number, source: string): WebGLShader | null {
   const shader = gl.createShader(type);
   if (!shader) return null;
 
@@ -139,7 +135,7 @@ function createShader(
 function createProgram(
   gl: WebGLRenderingContext,
   vertexShader: WebGLShader,
-  fragmentShader: WebGLShader
+  fragmentShader: WebGLShader,
 ): WebGLProgram | null {
   const program = gl.createProgram();
   if (!program) return null;
@@ -174,11 +170,7 @@ export default function ShaderBackground() {
 
     // Create shaders
     const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
-    const fragmentShader = createShader(
-      gl,
-      gl.FRAGMENT_SHADER,
-      fragmentShaderSource
-    );
+    const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
 
     if (!vertexShader || !fragmentShader) {
       return;
@@ -193,9 +185,7 @@ export default function ShaderBackground() {
     // Setup geometry (fullscreen quad)
     const positionBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-    const positions = new Float32Array([
-      -1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1,
-    ]);
+    const positions = new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]);
     gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
 
     // Get attribute and uniform locations

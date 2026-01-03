@@ -54,7 +54,7 @@ export function EmblaCarousel({
               className={cn(
                 // Show multiple slides at once so neighbours are visible
                 "shrink-0 ",
-                slideClassName
+                slideClassName,
               )}
             >
               {child}

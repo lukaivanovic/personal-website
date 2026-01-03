@@ -27,8 +27,8 @@ function setTheme(theme: string) {
 }
 
 function getCurrentTheme(): string {
-  if (typeof document === "undefined") return "8-ball";
-  return document.documentElement.getAttribute("data-theme") || "8-ball";
+  if (typeof document === "undefined") return "vanilla";
+  return document.documentElement.getAttribute("data-theme") || "vanilla";
 }
 
 export default function ThemeSelect() {
@@ -48,8 +48,8 @@ export default function ThemeSelect() {
 
   return (
     <Select.Root items={themes} value={value} onValueChange={handleValueChange}>
-      <Select.Trigger className="group px-1 cursor-pointer md:cursor-default text-secondary flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background ">
-        {themes.find((theme) => theme.value === value)?.label || "8-ball"}
+      <Select.Trigger className="group px-1 cursor-pointer md:cursor-default text-secondary  flex flex-row items-center gap-1 hover:bg-foreground hover:text-background active:bg-foreground active:text-background ">
+        {themes.find((theme) => theme.value === value)?.label || "Vanilla"}
         <Caret className="rotate-90 transition-transform duration-200 group-data-popup-open:rotate-0" />
       </Select.Trigger>
       <Select.Portal>

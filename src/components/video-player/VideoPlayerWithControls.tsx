@@ -8,10 +8,7 @@ interface VideoPlayerProps {
   aspectRatio: string | "video";
 }
 
-export default function VideoPlayer({
-  url,
-  aspectRatio = "video",
-}: VideoPlayerProps) {
+export default function VideoPlayer({ url, aspectRatio = "video" }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<"playing" | "paused">("paused");
@@ -30,7 +27,7 @@ export default function VideoPlayer({
       {
         threshold: 0.1,
         rootMargin: "50px",
-      }
+      },
     );
 
     observer.observe(container);
@@ -66,10 +63,7 @@ export default function VideoPlayer({
             console.error("Error loading video:", e);
           }}
         >
-          <source
-            src={url}
-            type={url.endsWith(".mov") ? "video/quicktime" : "video/mp4"}
-          />
+          <source src={url} type={url.endsWith(".mov") ? "video/quicktime" : "video/mp4"} />
           <source src={url} type="video/webm; codecs=vp8,vorbis" />
           Your browser does not support the video tag.
         </video>

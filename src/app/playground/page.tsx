@@ -25,11 +25,7 @@ export default function Playground() {
             aspectRatio="1/1"
           />
           <VideoComponent fileName="material-maker" aspectRatio="1/1" />
-          <VideoComponent
-            fileName="menu"
-            className="border border-neutral-100"
-            aspectRatio="5/4"
-          />
+          <VideoComponent fileName="menu" className="border border-neutral-100" aspectRatio="5/4" />
 
           <VideoComponent fileName="threejs" aspectRatio="16/9" />
         </div>
@@ -47,11 +43,5 @@ async function VideoComponent({
   aspectRatio: string;
   className?: string;
 }) {
-  return (
-    <VideoPlayer
-      className={className}
-      url={fileName}
-      aspectRatio={aspectRatio}
-    />
-  );
+  return <VideoPlayer className={className} url={fileName} aspectRatio={aspectRatio} />;
 }

@@ -1,8 +1,4 @@
-export default function Pattern({
-  viewBoxWidth = 320,
-}: {
-  viewBoxWidth?: number;
-}) {
+export default function Pattern({ viewBoxWidth = 320 }: { viewBoxWidth?: number }) {
   const viewBox = `0 0 ${viewBoxWidth} 4`;
   return (
     <svg

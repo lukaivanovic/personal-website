@@ -28,8 +28,7 @@ const CarouselDots: React.FC<CarouselDotsProps> = ({
   }, [progress]);
 
   const currentItem = items[activeIndex];
-  const progressColor =
-    currentItem?.progressColor || "rgba(255, 255, 255, 0.5)";
+  const progressColor = currentItem?.progressColor || "rgba(255, 255, 255, 0.5)";
 
   return (
     <div className="relative flex items-center justify-center p-[3px]">
@@ -41,9 +40,7 @@ const CarouselDots: React.FC<CarouselDotsProps> = ({
           style={{
             background: `conic-gradient(var(--color-neutral-400) 0deg, var(--color-neutral-400) ${
               (angle * 180) / Math.PI
-            }deg, rgba(0, 0, 0, 0.2) ${
-              (angle * 180) / Math.PI
-            }deg, rgba(0, 0, 0, 0.2) 360deg)`,
+            }deg, rgba(0, 0, 0, 0.2) ${(angle * 180) / Math.PI}deg, rgba(0, 0, 0, 0.2) 360deg)`,
           }}
           transition={{ duration: 0.1 }}
         />
@@ -80,9 +77,7 @@ const CarouselDots: React.FC<CarouselDotsProps> = ({
                   height="6"
                   fill="currentColor"
                   viewBox="0 0 6 6"
-                  className={`${
-                    isActive ? "text-foreground" : "text-foreground/40"
-                  }`}
+                  className={`${isActive ? "text-foreground" : "text-foreground/40"}`}
                 >
                   <path d="M5.107 2.691c.23.142.23.476 0 .618L.853 5.933A.363.363 0 0 1 .3 5.624V.376C.3.092.611-.082.853.067l4.254 2.624Z" />
                 </svg>
@@ -90,9 +85,7 @@ const CarouselDots: React.FC<CarouselDotsProps> = ({
                 // Circle for image
                 <div
                   className={`w-[6px] h-[6px] rounded-full  transition-colors duration-200 ${
-                    isActive
-                      ? "bg-foreground  shadow-lg"
-                      : "bg-foreground/40  backdrop-blur-sm"
+                    isActive ? "bg-foreground  shadow-lg" : "bg-foreground/40  backdrop-blur-sm"
                   }`}
                 />
               )}

@@ -54,7 +54,7 @@ const PlayIcon = forwardRef<PlayIconHandle, PlayIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [controls, onMouseEnter]
+      [controls, onMouseEnter],
     );
 
     const handleMouseLeave = useCallback(
@@ -65,7 +65,7 @@ const PlayIcon = forwardRef<PlayIconHandle, PlayIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [controls, onMouseLeave]
+      [controls, onMouseLeave],
     );
     return (
       <div
@@ -85,15 +85,11 @@ const PlayIcon = forwardRef<PlayIconHandle, PlayIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <motion.polygon
-            points="6 3 20 12 6 21 6 3"
-            variants={pathVariants}
-            animate={controls}
-          />
+          <motion.polygon points="6 3 20 12 6 21 6 3" variants={pathVariants} animate={controls} />
         </motion.svg>
       </div>
     );
-  }
+  },
 );
 
 PlayIcon.displayName = "PlayIcon";

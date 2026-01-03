@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
   },
   "dependencies": {
     "@base-ui-components/react": "^1.0.0-beta.4",
@@ -35,6 +36,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "oxfmt": "^0.21.0",
+    "oxlint": "^1.36.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
