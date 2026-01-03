@@ -3,7 +3,7 @@ import VideoWithCaption from "@/components/video-player/VideoWithCaption";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col gap-12 p-4">
+    <div className="min-h-screen flex flex-col gap-28 p-4">
       {/* Profound Shopping */}
       <section className="flex flex-col items-center gap-4">
         <div className="aspect-3/2 relative px-6 rounded-xl flex items-center justify-center">
