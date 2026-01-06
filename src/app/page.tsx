@@ -1,89 +1,233 @@
 import VideoPlayer from "@/components/video-player/VideoPlayer";
 import VideoWithCaption from "@/components/video-player/VideoWithCaption";
+import ProfoundLogo from "@/assets/ProfoundLogo";
+import DaytonaLogo from "@/assets/DaytonaLogo";
+import TurboLogo from "@/assets/TurboLogo";
+import BuenaLogo from "@/assets/BuenaLogo";
+import WewebLogo from "@/assets/WewebLogo";
+import AkkioLogo from "@/assets/AkkioLogo";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col gap-28 p-4">
-      {/* Profound Shopping */}
-      <section className="flex flex-col items-center gap-4">
-        <div className="aspect-3/2 relative px-6 rounded-xl flex items-center justify-center">
-          <img
-            src="/profound-3.png"
-            alt=""
-            className="z-10 w-full h-auto object-cover scale-90"
-            width={1200}
-            height={800}
-          />
-          <img
-            src="/profound-bg.png"
-            alt="Profound Shopping background"
-            className="w-full h-full absolute inset-0 object-cover"
-          />
+    <>
+      <section className="pt-24 pb-24">
+        <h1 className="title max-w-[800px] pb-2">
+          Design engineering practice founded by Luka Ivanovic. Combining design
+          and development into one discipline, the practice reduces handoffs,
+          minimizes rework, and enables teams to ship with clarity and speed.
+          Built for founders who appreciate craft and want to stay lean without
+          compromising quality.
+        </h1>
+        <p className="text-secondary pb-8 max-w-[800px]">
+          We offer continuous personal relationship depending on your needs
+          instead of limited subscription packages or sprints.
+        </p>
+
+        <div className="flex flex-row items-center gap-3 pb-12 text-[13px]">
+          <a
+            className="px-4 py-2 bg-foreground text-background rounded-full"
+            href="https://wa.me/385958845960"
+            target="_blank"
+          >
+            Chat with us
+          </a>
+          <span className="text-secondary">
+            {" "}
+            or email at{" "}
+            <a href="mailto:hi@lukaivanovic.co" className="text-foreground">
+              hi@lukaivanovic.co
+            </a>
+            .
+          </span>
         </div>
-        <div className="flex flex-col items-center text-center w-120 gap-1 ">
-          <h2 className="font-medium">Profound Shopping</h2>
-          <p className="text-secondary">
-            Built the brand new Profound Shopping analytics package which
-            provides an extremely detailed view into ChatGPT's shopping results.
-          </p>
+
+        <div className="h-px bg-foreground/6 w-full" />
+
+        <div className="flex flex-row items-center gap-4 text-secondary py-6">
+          <div className="text-secondary text-[13px]">Trusted by</div>
+
+          <div className="flex flex-row gap-4">
+            <ProfoundLogo className="h-5 w-auto" />
+            <DaytonaLogo className="h-5 w-auto" />
+            {/* <TurboLogo className="h-7 w-auto" /> */}
+            <BuenaLogo className="h-5 w-auto" />
+            <WewebLogo className="h-5 w-auto" />
+            <AkkioLogo className="h-5 w-auto" />
+          </div>
+        </div>
+
+        <div className="h-px bg-foreground/6 w-full" />
+
+        <div className="grid grid-cols-[repeat(4,140px)] text-[13px] pb-6 pt-6">
+          <div className="flex flex-col gap-3">
+            <div className="text-secondary">Design</div>
+
+            <ul>
+              <li>Web</li>
+              <li>Mobile</li>
+              <li>Desktop</li>
+              <li>Websites</li>
+              <li>Branding</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="text-secondary">Product</div>
+
+            <ul>
+              <li>User experience</li>
+              <li>Strategy</li>
+              <li>Research</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="text-secondary">Development</div>
+
+            <ul>
+              <li>Frontend</li>
+              <li>iOS</li>
+              <li>Creative coding</li>
+              <li>Desktop</li>
+              <li>Design systems</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="text-secondary">Technologies</div>
+
+            <ul>
+              <li>React</li>
+              <li>Solid</li>
+              <li>Next.js</li>
+              <li>Tailwind</li>
+              <li>Radix & Base UI</li>
+              <li>SwiftUI</li>
+              <li>Motion.dev</li>
+              <li>Three.js</li>
+              <li className="text-secondary">+ many more</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="h-px bg-foreground/6 w-full" />
+      </section>
+
+      <section className="gap-4 py-24">
+        <h2 className="title pb-1">
+          Building Profound's brand new AI shopping analytics experience
+        </h2>
+        <p className="text-secondary">
+          Profound helps brands get mentioned in AI responses. We worked on
+          brand new analytic pages for shopping responses.
+        </p>
+
+        <div className="grid grid-cols-2 gap-2 mt-8">
+          <div className="aspect-square relative rounded-md  w-full bg-black/6 p-6 flex items-center justify-center">
+            <img src="/profound-2.webp" className="max-w-[95%] h-auto z-10" />
+          </div>
+          <div className="aspect-square relative rounded-md   w-full bg-black/6 p-6 flex items-center justify-center">
+            <img src="/profound-3.png" className="max-w-[95%] h-auto z-10" />
+          </div>
+          <div className="aspect-square relative rounded-md   w-full bg-black/6 p-6 flex items-center justify-center">
+            <img src="/profound-4.png" className="max-w-[95%] h-auto z-10" />
+          </div>
+          <div className="aspect-square relative rounded-md   w-full bg-black/6 p-6 flex items-center justify-center">
+            <video
+              src="/profound-tabs.mp4"
+              className="max-w-[95%] h-auto z-10"
+              autoPlay
+              muted
+              loop
+            />
+          </div>
         </div>
       </section>
 
-      {/* Buena website */}
-      <section className="flex flex-col items-center gap-4">
-        <div className="aspect-3/ w-full bg-linear-to-b from-foreground/10 to-foreground/5 p-6 flex items-center justify-center">
-          <VideoPlayer url="buena" aspectRatio="16/9" className="w-full" />
-        </div>
-        <div className="flex flex-col items-center text-center w-120">
-          <h2 className="font-medium">Buena website</h2>
-          <p className="text-secondary">
-            Built and designed the new buena.com website celebrating their $58M
-            Series A.
-          </p>
+      <section className="gap-4 py-24">
+        <h2 className="title pb-1">
+          Designing and building the most advanced no-code and AI web
+          application builder.
+        </h2>
+
+        <div className="grid grid-cols-2 gap-2 mt-8">
+          <div className="aspect-square relative rounded-md w-full bg-black/6 p-6 flex items-center justify-center">
+            <img
+              src="/weweb/editor-new.png"
+              className="max-w-[95%] h-auto z-10"
+            />
+          </div>
+          <div className="aspect-square relative rounded-md w-full bg-black/6 p-6 flex items-center justify-center">
+            <img
+              src="/weweb/edition-panel.png"
+              className="max-w-[95%] h-auto z-10"
+            />
+          </div>
+          <div className="aspect-square relative rounded-md w-full bg-black/6 p-6 flex items-center justify-center">
+            <img
+              src="/weweb/workflows.png"
+              className="max-w-[95%] h-auto z-10"
+            />
+          </div>
+
+          <div className="aspect-square relative rounded-md w-full bg-black/6 p-6 flex items-center justify-center">
+            <VideoPlayer
+              url="ww-ai"
+              aspectRatio="16/10"
+              className="max-h-[60%] w-auto z-10"
+            />
+          </div>
         </div>
       </section>
 
-      {/* WeWeb Editor */}
-      <section className="flex flex-col items-center gap-4">
-        <div className="flex flex-col items-center gap-2">
-          <img
-            src="/weweb/editor-new.png"
-            alt="Create states, components or edit your elements visually"
-            className="pointer-events-none select-none w-full h-auto"
-            width={1200}
-            height={800}
-          />
+      <section className="gap-4 py-24">
+        <h2 className="title pb-1">
+          Landing page for Buena celebrating their $58M Series A.
+        </h2>
+        <p className="text-secondary">
+          We built and designed the new buena.com website celebrating their $58M
+          Series A.
+        </p>
 
-          <img
-            src="/weweb/workflows.png"
-            alt="Manage your app logic and data from a single place"
-            className="pointer-events-none select-none w-full h-auto"
-            width={1200}
-            height={800}
-          />
-          <VideoPlayer
-            url="ww-ai"
-            aspectRatio="16/10"
-            className="pointer-events-none"
-          />
-        </div>
-        <div className="flex flex-col items-center text-center w-120">
-          <h2 className="font-medium">WeWeb Editor</h2>
-          <p className="text-secondary">
-            Platform for building complex web applications with database
-            conntections, comprehensive styling and workflow automation
-          </p>
+        <div className="grid grid-cols-2 gap-2 mt-8">
+          <div className="aspect-video relative rounded-md  w-full bg-black/6 p-6 flex items-center justify-center col-span-2">
+            <VideoPlayer
+              url="buena"
+              aspectRatio="16/9"
+              className="max-h-[80%] w-auto z-10"
+            />
+          </div>
         </div>
       </section>
 
-      {/* Playground */}
+      <section className="gap-4 py-24">
+        <h2 className="title pb-1">
+          Designing and building Daytona’s sandboxes views
+        </h2>
+        <p className="text-secondary">
+          Daytona is building a new primitive for the AI age — sandbox. We
+          helped them shape their main sandbox screens in their
+          Next.js/Tailwind/Radix stack.
+        </p>
+
+        <div className="grid grid-cols-2 gap-2 mt-8">
+          <div className="aspect-video relative rounded-md  w-full bg-black/6 p-6 flex items-center justify-center col-span-2">
+            <img src="/daytona-01.png" className="max-h-[80%] w-auto z-10" />
+          </div>
+          <div className="aspect-square relative rounded-md   w-full bg-black/6 p-6 flex items-center justify-center">
+            <img src="/daytona-02.png" className="max-w-[80%] h-auto z-10" />
+          </div>
+          <div className="aspect-square relative rounded-md   w-full bg-black/6 p-6 flex items-center justify-center">
+            <img src="/daytona-03.png" className="max-w-[80%] h-auto z-10" />
+          </div>
+        </div>
+      </section>
+
       <section className="flex flex-col gap-6 md:col-span-2">
-        {/* <div className="flex flex-col gap-0.5">
-          <h2 className="text-base font-medium text-pretty">Playground</h2>
-          <p className="text-secondary text-pretty">
-            This is where you will find some of my experiments and prototypes.
-          </p>
-        </div> */}
+        <h2 className="title pb-1">
+          Constantly exploring new ideas and building prototypes
+        </h2>
+
         <div className="gap-2 grid grid-cols-1  md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <VideoWithCaption
@@ -133,6 +277,25 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+
+      <section className="py-24 flex flex-col items-center justify-center">
+        {/* <div className="text-[23px] font-medium leading-[32px] text-pretty pb-1">
+          Get in touch
+        </div> */}
+        <div className="flex flex-row items-center gap-3 pb-8 text-[13px]">
+          <a className="px-4 py-2 bg-foreground text-background rounded-full">
+            Chat with us
+          </a>
+          <span className="text-secondary">
+            {" "}
+            or email at{" "}
+            <a href="mailto:hi@lukaivanovic.co" className=" text-foreground">
+              hi@lukaivanovic.co
+            </a>
+            .
+          </span>
+        </div>
+      </section>
+    </>
   );
 }
