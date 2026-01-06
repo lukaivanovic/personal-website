@@ -29,7 +29,7 @@ export default function Home() {
             href="https://wa.me/385958845960"
             target="_blank"
           >
-            Chat with us
+            Chat with me
           </a>
           <span className="text-secondary">
             {" "}
@@ -280,7 +280,7 @@ export default function Home() {
         </div> */}
         <div className="flex flex-row items-center gap-3 pb-8 text-[13px]">
           <a className="px-4 py-2 bg-foreground text-background rounded-full">
-            Chat with us
+            Chat with me
           </a>
           <span className="text-secondary">
             {" "}
