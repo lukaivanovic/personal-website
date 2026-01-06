@@ -18,7 +18,7 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 24px;
@@ -28,25 +28,41 @@
 [data-theme="8-ball"] {
   --background: #000000;
   --foreground: #ffffff;
-  --foreground-secondary: color-mix(in srgb, var(--foreground) 50%, transparent);
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 50%,
+    transparent
+  );
 }
 
 [data-theme="cool-blue"] {
   --background: #130923;
   --foreground: #b6e4ee;
-  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
 }
 
 [data-theme="hazelnut"] {
   --background: #eae7e1;
   --foreground: #363021;
-  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
 }
 
 [data-theme="strawberry"] {
   --background: #ffc8ea;
   --foreground: #ff2e00;
-  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
 }
 
 [data-theme="vanilla"] {
@@ -76,12 +92,16 @@
   }
   --background: #0a0a0a;
   --foreground: #ffffff;
-  --foreground-secondary: color-mix(in srgb, var(--foreground) 72%, transparent);
+  --foreground-secondary: color-mix(
+    in srgb,
+    var(--foreground) 72%,
+    transparent
+  );
 }
 
 .logo {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(4963%) hue-rotate(11deg)
-    brightness(89%) contrast(122%);
+  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(4963%)
+    hue-rotate(11deg) brightness(89%) contrast(122%);
 }
 
 @theme inline {
@@ -101,8 +121,7 @@
 
 @font-face {
   font-family: "TWK Lausanne";
-  src:
-    url("/fonts/TWKLausanne-550.otf") format("opentype"),
+  src: url("/fonts/TWKLausanne-550.otf") format("opentype"),
     url("/fonts/TWKLausanne-550.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -111,8 +130,7 @@
 
 @font-face {
   font-family: "TWK Lausanne";
-  src:
-    url("/fonts/TWKLausanne-350.otf") format("opentype"),
+  src: url("/fonts/TWKLausanne-350.otf") format("opentype"),
     url("/fonts/TWKLausanne-350.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -124,10 +142,18 @@ body {
   color: var(--foreground);
   font-family: "TWK Lausanne", sans-serif;
   position: relative;
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36px;
+  text-pretty: true;
 }
 
 @utility underline-link {
