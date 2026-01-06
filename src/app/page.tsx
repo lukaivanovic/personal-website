@@ -182,12 +182,8 @@ export default function Home() {
 
       <section className="gap-4 py-24">
         <h2 className="title pb-1">
-          Landing page for Buena celebrating their $58M Series A.
+          Landing page for Buena celebrating their $58M Series A
         </h2>
-        <p className="text-secondary">
-          We built and designed the new buena.com website celebrating their $58M
-          Series A.
-        </p>
 
         <div className="grid grid-cols-2 gap-2 mt-8">
           <div className="aspect-video relative rounded-md  w-full bg-black/6 p-6 flex items-center justify-center col-span-2">
