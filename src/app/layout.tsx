@@ -49,7 +49,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="vanilla" className="[scrollbar-gutter:stable]">
       <body className="overflow-x-hidden">
-        <main className="grid grid-cols-[560px_1fr]">{children}</main>
+        <main className="min-h-screen w-full flex flex-col items-center">
+          {children}
+        </main>
 
         <Analytics />
         <SpeedInsights />
