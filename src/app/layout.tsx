@@ -49,23 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="vanilla" className="[scrollbar-gutter:stable]">
       <body className="overflow-x-hidden">
-        <main className="container">
-          <header className="py-3">
-            <div className="flex flex-row items-center justify-between gap-2">
-              {/* <Link href="/" className="flex flex-row items-center gap-2">
-                <Apollon className="size-15" />
-              </Link> */}
-              <div className="text-[13px]">
-                <div className="font-medium">Luka Ivanovic D.E.P</div>
-                <div className="text-secondary">
-                  Design Engineering Practice
-                </div>
-              </div>
-            </div>
-          </header>
-
-          {children}
-        </main>
+        <main className="grid grid-cols-[560px_1fr]">{children}</main>
 
         <Analytics />
         <SpeedInsights />
