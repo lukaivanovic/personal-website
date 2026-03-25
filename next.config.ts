@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     return [
         {
             source: '/gradient',
-            destination: `https://ivanovicluka.co/gradient`,
+            destination: `https://www.2026-03-23-easing-gradient-generato.vercel.app/gradient`,
         }
     ];
   }
